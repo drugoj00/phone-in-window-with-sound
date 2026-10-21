@@ -47,3 +47,8 @@ The installer is about 31 MB: scrcpy with audio is already inside, so you don't 
 - [scrcpy](https://github.com/Genymobile/scrcpy) (Genymobile, Apache 2.0 license): shows the screen and passes your clicks and keystrokes to the phone.
 - [sndcpy](https://github.com/rom1v/sndcpy) (Romain Vimont, Apache 2.0 license): forwards the sound from Android 10.
 - The wrapper (launcher, phone selection, window buttons, rotation, sound for Android 10, installer, phone report) is written separately and is not a Genymobile product.
+
+## News and support
+
+- Telegram channel: [t.me/PhoneInWindowSound](https://t.me/PhoneInWindowSound)
+- Website: [drugoj00.github.io/phone-in-window-with-sound](https://drugoj00.github.io/phone-in-window-with-sound/)
