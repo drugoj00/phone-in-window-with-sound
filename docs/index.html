@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Phone in Window with Sound</title>
+<meta name="description" content="Show your Android phone screen in a window on Windows, with sound, mouse and keyboard. Free installer built on scrcpy, no internet or admin rights needed.">
+<meta property="og:title" content="Phone in Window with Sound">
+<meta property="og:description" content="Android phone screen in a window on your Windows PC, with sound. Built on scrcpy.">
+<meta property="og:image" content="https://drugoj00.github.io/phone-in-window-with-sound/icon.png">
+<link rel="icon" href="icon.png">
+<style>
+:root{
+  --bg:#f2f7f6; --card:#ffffff; --ink:#0b1f26; --muted:#4a666b; --line:#d6e4e2;
+  --accent:#0f766e; --accent-ink:#ffffff; --hero1:#0b3b3a; --hero2:#0f766e; --hero-ink:#f2f7f6; --warn:#fff6e0; --warn-ink:#5c4300;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#0d1a1e; --card:#13262b; --ink:#e8f1f0; --muted:#9db8b5; --line:#24404a;
+    --accent:#2dd4bf; --accent-ink:#06211f; --hero1:#06201f; --hero2:#0b4a47; --warn:#2a2410; --warn-ink:#f1dfa4;
+  }
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.6 "Segoe UI",system-ui,-apple-system,Roboto,Arial,sans-serif}
+a{color:var(--accent)}
+.wrap{max-width:980px;margin:0 auto;padding:0 16px}
+header.hero{background:linear-gradient(135deg,var(--hero1),var(--hero2));color:var(--hero-ink);padding:20px 0 64px}
+.top{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:12px;font-weight:700;font-size:18px}
+.brand img{width:44px;height:44px;border-radius:10px}
+.langs{display:flex;gap:6px}
+.langs button{background:rgba(255,255,255,.12);color:var(--hero-ink);border:1px solid rgba(255,255,255,.35);border-radius:8px;padding:6px 12px;font:inherit;font-size:15px;cursor:pointer}
+.langs button[aria-pressed="true"]{background:#fff;color:#0b3b3a;border-color:#fff}
+.hero h1{font-size:clamp(30px,6vw,52px);line-height:1.15;margin:44px 0 12px;font-weight:700}
+.hero p.lead{font-size:clamp(18px,2.6vw,22px);max-width:720px;margin:0 0 28px;opacity:.95}
+.btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-block;background:#fff;color:#0b3b3a;text-decoration:none;font-weight:700;padding:14px 26px;border-radius:12px;font-size:18px}
+.btn.ghost{background:transparent;color:var(--hero-ink);border:2px solid rgba(255,255,255,.6)}
+.small{font-size:15px;opacity:.9;margin-top:14px}
+main section{padding:44px 0 0}
+h2{font-size:28px;margin:0 0 16px;line-height:1.25}
+.grid{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 18px}
+.card b{display:block;margin-bottom:4px}
+.shots{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));align-items:start}
+.shots figure{margin:0;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px}
+.shots img{width:100%;height:auto;border-radius:8px;display:block}
+.shots figcaption{font-size:15px;color:var(--muted);margin-top:8px}
+ol.steps{padding-left:22px;margin:0}
+ol.steps li{margin:8px 0}
+ul.plain{padding-left:22px;margin:0}
+ul.plain li{margin:6px 0}
+.note{background:var(--warn);color:var(--warn-ink);border-radius:12px;padding:14px 18px;margin-top:14px;font-size:16px}
+footer{margin-top:56px;padding:28px 0 40px;border-top:1px solid var(--line);color:var(--muted);font-size:15px}
+footer .links{display:flex;gap:18px;flex-wrap:wrap;margin-bottom:10px}
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="wrap">
+    <div class="top">
+      <div class="brand"><img src="icon.png" alt="" width="44" height="44"><span data-i="name">Phone in Window with Sound</span></div>
+      <div class="langs" role="group" aria-label="Language">
+        <button data-lang="en" aria-pressed="true">English</button>
+        <button data-lang="uk" aria-pressed="false">Українська</button>
+        <button data-lang="ru" aria-pressed="false">Русский</button>
+      </div>
+    </div>
+    <h1 data-i="h1">Your Android phone in a Windows window, with sound</h1>
+    <p class="lead" data-i="lead">See the real phone screen on your PC, click with the mouse, type on the keyboard and listen to the phone through the computer. Apps keep running on the phone, so banking apps and messengers behave as usual.</p>
+    <div class="btns">
+      <a class="btn" id="dl" href="https://github.com/drugoj00/phone-in-window-with-sound/releases/latest/download/PhoneInWindowWithSound.exe" data-i="dl">Download for Windows</a>
+      <a class="btn ghost" href="https://github.com/drugoj00/phone-in-window-with-sound" data-i="gh">View on GitHub</a>
+    </div>
+    <p class="small" data-i="dlnote">PhoneInWindowWithSound.exe, about 31 MB. Free. No internet and no administrator rights needed. Windows 10 and 11.</p>
+  </div>
+</header>
+
+<main class="wrap">
+  <section>
+    <h2 data-i="f_h">What it does</h2>
+    <div class="grid" id="features"></div>
+  </section>
+
+  <section>
+    <h2 data-i="s_h">How it looks</h2>
+    <div class="shots">
+      <figure><img id="img_installer" src="installer_en.png" alt="Installer window" width="1280" height="1000"><figcaption data-i="s_c1">The installer: everything is inside, one click to install.</figcaption></figure>
+      <figure><img id="img_buttons" src="buttons_en.png" alt="Window buttons" width="1664" height="690"><figcaption data-i="s_c2">Four buttons beside every phone window: Copy, Paste, Rotate, Turn off screen. Illustration, not a real phone screen.</figcaption></figure>
+    </div>
+  </section>
+
+  <section>
+    <h2 data-i="st_h">Getting started</h2>
+    <ol class="steps" id="steps"></ol>
+  </section>
+
+  <section>
+    <h2 data-i="rq_h">What you need</h2>
+    <ul class="plain" id="reqs"></ul>
+  </section>
+
+  <section>
+    <h2 data-i="lm_h">Limitations</h2>
+    <ul class="plain" id="lims"></ul>
+    <div class="note" data-i="smart">The installer is not signed with a publisher certificate yet, so Windows may show a SmartScreen warning ("unknown publisher"): click "More info" and then "Run anyway" if you downloaded the file from here. The SHA-256 checksum is in the description of every release.</div>
+  </section>
+
+  <section>
+    <h2 data-i="mk_h">What it is made of</h2>
+    <ul class="plain">
+      <li><a href="https://github.com/Genymobile/scrcpy">scrcpy</a> (Genymobile, Apache 2.0) <span data-i="mk1">shows the screen and passes your clicks and keystrokes to the phone.</span></li>
+      <li><a href="https://github.com/rom1v/sndcpy">sndcpy</a> (Romain Vimont, Apache 2.0) <span data-i="mk2">forwards the sound from Android 10.</span></li>
+      <li data-i="mk3">The wrapper (launcher, phone selection, window buttons, rotation, installer, phone report) is written separately and is not a Genymobile product.</li>
+    </ul>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="links">
+      <a href="https://github.com/drugoj00/phone-in-window-with-sound/releases/latest" data-i="f_rel">All versions</a>
+      <a href="https://github.com/drugoj00/phone-in-window-with-sound/issues" data-i="f_issue">Report a problem</a>
+      <a href="https://github.com/drugoj00/phone-in-window-with-sound" data-i="f_src">Source on GitHub</a>
+    </div>
+    <div data-i="f_note">Phone in Window with Sound is an independent project built on scrcpy. Not affiliated with Genymobile or Google.</div>
+  </div>
+</footer>
+
+<script>
+var I18N = {
+  en: {
+    name: "Phone in Window with Sound",
+    h1: "Your Android phone in a Windows window, with sound",
+    lead: "See the real phone screen on your PC, click with the mouse, type on the keyboard and listen to the phone through the computer. Apps keep running on the phone, so banking apps and messengers behave as usual.",
+    dl: "Download for Windows", gh: "View on GitHub",
+    dlnote: "PhoneInWindowWithSound.exe, about 31 MB. Free. No internet and no administrator rights needed. Windows 10 and 11.",
+    f_h: "What it does", s_h: "How it looks",
+    s_c1: "The installer: everything is inside, one click to install.",
+    s_c2: "Four buttons beside every phone window: Copy, Paste, Rotate, Turn off screen. Illustration, not a real phone screen.",
+    st_h: "Getting started", rq_h: "What you need", lm_h: "Limitations",
+    smart: "The installer is not signed with a publisher certificate yet, so Windows may show a SmartScreen warning (\"unknown publisher\"): click \"More info\" and then \"Run anyway\" if you downloaded the file from here. The SHA-256 checksum is in the description of every release.",
+    mk_h: "What it is made of",
+    mk1: "shows the screen and passes your clicks and keystrokes to the phone.",
+    mk2: "forwards the sound from Android 10.",
+    mk3: "The wrapper (launcher, phone selection, window buttons, rotation, installer, phone report) is written separately and is not a Genymobile product.",
+    f_rel: "All versions", f_issue: "Report a problem", f_src: "Source on GitHub",
+    f_note: "Phone in Window with Sound is an independent project built on scrcpy. Not affiliated with Genymobile or Google.",
+    features: [
+      ["Mouse and keyboard", "A click works as a tap, the wheel scrolls, and you can type straight into the phone's text fields."],
+      ["Phone sound on the computer", "Android 11 and newer out of the box, Android 10 through the small sndcpy app (installed automatically). No sound on Android 9 and older."],
+      ["Four buttons beside the window", "Copy, Paste (text in any language), Rotate and Turn off screen."],
+      ["The phone stays awake", "It does not fall asleep or lock while the window is open; the picture and sound don't drop out."],
+      ["Several phones at once", "Each phone gets its own window; one shortcut opens all connected phones."],
+      ["Cable or Wi-Fi", "By cable, by Wi-Fi after connecting once with a cable, and by Wi-Fi without a cable on Android 11 and newer."],
+      ["Phone report", "The program collects information about the phone (serial numbers and addresses are hidden) and tells you what to turn on."],
+      ["English, Ukrainian, Russian", "The installer and the program pick the language from your Windows language. A detailed guide is built in."]
+    ],
+    steps: [
+      "Run the installer.",
+      "On the phone, turn on Developer options once (Settings, About phone, tap \"Build number\" 7 times) and \"USB debugging\".",
+      "Connect the phone with a cable, allow debugging (\"Allow USB debugging?\") and launch the \"Window (cable)\" shortcut."
+    ],
+    reqs: [
+      "Windows 10 or 11.",
+      "An Android 5.0 or newer phone (copy and paste work from Android 7).",
+      "A cable that carries data, not just charge."
+    ],
+    lims: [
+      "iPhone is not supported.",
+      "Xiaomi, Redmi and POCO phones need \"USB debugging (Security settings)\" turned on, otherwise the mouse and keyboard won't work.",
+      "Some banking apps don't like \"USB debugging\" being on and may refuse to open: that is up to the app itself.",
+      "Phone calls and apps that forbid recording their sound can't be heard in the window.",
+      "Tested on Samsung Galaxy S9, A7 and A14."
+    ]
+  },
+  uk: {
+    name: "Телефон у вікні зі звуком",
+    h1: "Твій Android-телефон у вікні Windows, зі звуком",
+    lead: "Справжній екран телефона на комп'ютері: клацай мишею, друкуй з клавіатури й слухай звук телефона через комп'ютер. Застосунки працюють на самому телефоні, тому банківські застосунки й месенджери поводяться як зазвичай.",
+    dl: "Завантажити для Windows", gh: "Сторінка на GitHub",
+    dlnote: "PhoneInWindowWithSound.exe, близько 31 МБ. Безкоштовно. Інтернет і права адміністратора не потрібні. Windows 10 і 11.",
+    f_h: "Що вміє", s_h: "Як це виглядає",
+    s_c1: "Інсталятор: усе вже всередині, встановлення одним натисканням.",
+    s_c2: "Чотири кнопки біля кожного вікна телефона: Копіювати, Вставити, Повернути, Погасити екран. Ілюстрація, не справжній екран телефона.",
+    st_h: "Як почати", rq_h: "Що потрібно", lm_h: "Обмеження",
+    smart: "Інсталятор поки не підписаний сертифікатом видавця, тому Windows може показати попередження SmartScreen («невідомий видавець»): натисни «Докладніше» і «Усе одно виконати», якщо завантажив файл звідси. Контрольну суму SHA-256 вказано в описі кожного релізу.",
+    mk_h: "З чого складається",
+    mk1: "показує екран і передає натискання.",
+    mk2: "передає звук з Android 10.",
+    mk3: "Оболонка (запуск, вибір телефона, кнопки біля вікна, поворот, інсталятор, звіт про телефон) написана окремо й не є продуктом Genymobile.",
+    f_rel: "Усі версії", f_issue: "Повідомити про проблему", f_src: "Код на GitHub",
+    f_note: "Телефон у вікні зі звуком — незалежний проєкт на основі scrcpy. Не пов'язаний з Genymobile чи Google.",
+    features: [
+      ["Миша і клавіатура", "Клацання як дотик, колесо як прокручування, друк просто в поля телефона."],
+      ["Звук телефона на комп'ютері", "Android 11 і новіші одразу, Android 10 через маленький застосунок sndcpy (встановлюється сам). На Android 9 і старіших звуку немає."],
+      ["Чотири кнопки біля вікна", "Копіювати, Вставити (текст будь-якою мовою), Повернути й Погасити екран."],
+      ["Телефон не засинає", "Не засинає і не блокується, поки вікно відкрите; картинка і звук не зникають."],
+      ["Кілька телефонів одночасно", "У кожного телефона своє вікно; один ярлик відкриває всі підключені."],
+      ["Кабель або Wi-Fi", "Кабелем, по Wi-Fi після одного підключення кабелем і по Wi-Fi без кабелю на Android 11 і новіших."],
+      ["Звіт про телефон", "Програма сама збирає відомості про телефон (серійні номери й адреси приховано) та підказує, що ввімкнути."],
+      ["Українською, російською, англійською", "Інсталятор і програма обирають мову за мовою Windows. Докладна інструкція вбудована."]
+    ],
+    steps: [
+      "Запусти інсталятор.",
+      "На телефоні один раз увімкни режим розробника («Для розробників»: Налаштування, Про телефон, 7 разів торкнутися «Номер збірки») і «Налагодження USB».",
+      "Підключи телефон кабелем, дозволь налагодження («Дозволити налагодження USB?») і запусти ярлик «Вікно (кабель)»."
+    ],
+    reqs: [
+      "Windows 10 або 11.",
+      "Телефон Android 5.0 або новіший (копіювати й вставляти з Android 7).",
+      "Кабель, який передає дані, а не лише заряджає."
+    ],
+    lims: [
+      "iPhone не підтримується.",
+      "Телефони Xiaomi, Redmi, POCO потребують увімкненого «Налагодження USB (налаштування безпеки)», щоб працювали миша й клавіатура.",
+      "Частина банківських застосунків не любить увімкнене «Налагодження USB» і може відмовитися відкриватися: це вирішує сам застосунок.",
+      "Дзвінки й застосунки, які забороняють запис свого звуку, у вікні не чутно.",
+      "Перевірено на Samsung Galaxy S9, A7 і A14."
+    ]
+  },
+  ru: {
+    name: "Телефон в окне со звуком",
+    h1: "Твой Android-телефон в окне Windows, со звуком",
+    lead: "Настоящий экран телефона на компьютере: щёлкай мышью, печатай с клавиатуры и слушай звук телефона через компьютер. Приложения работают на самом телефоне, поэтому банковские приложения и мессенджеры ведут себя как обычно.",
+    dl: "Скачать для Windows", gh: "Страница на GitHub",
+    dlnote: "PhoneInWindowWithSound.exe, около 31 МБ. Бесплатно. Интернет и права администратора не нужны. Windows 10 и 11.",
+    f_h: "Что умеет", s_h: "Как это выглядит",
+    s_c1: "Установщик: всё уже внутри, установка одним нажатием.",
+    s_c2: "Четыре кнопки у каждого окна телефона: Копировать, Вставить, Повернуть, Погасить экран. Иллюстрация, не настоящий экран телефона.",
+    st_h: "Как начать", rq_h: "Что нужно", lm_h: "Ограничения",
+    smart: "Установщик пока не подписан сертификатом издателя, поэтому Windows может показать предупреждение SmartScreen («неизвестный издатель»): нажми «Подробнее» и «Выполнить в любом случае», если скачал файл отсюда. Контрольная сумма SHA-256 указана в описании каждого релиза.",
+    mk_h: "Из чего состоит",
+    mk1: "показывает экран и передаёт нажатия.",
+    mk2: "передаёт звук с Android 10.",
+    mk3: "Оболочка (запуск, выбор телефона, кнопки у окна, поворот, установщик, отчёт о телефоне) написана отдельно и не является продуктом Genymobile.",
+    f_rel: "Все версии", f_issue: "Сообщить о проблеме", f_src: "Код на GitHub",
+    f_note: "Телефон в окне со звуком — независимый проект на основе scrcpy. Не связан с Genymobile или Google.",
+    features: [
+      ["Мышь и клавиатура", "Щелчок как касание, колесо как прокрутка, печать прямо в поля телефона."],
+      ["Звук телефона на компьютере", "Android 11 и новее сразу, Android 10 через маленькое приложение sndcpy (ставится само). На Android 9 и старше звука нет."],
+      ["Четыре кнопки у окна", "Копировать, Вставить (текст на любом языке), Повернуть и Погасить экран."],
+      ["Телефон не засыпает", "Не засыпает и не блокируется, пока окно открыто; картинка и звук не пропадают."],
+      ["Несколько телефонов одновременно", "У каждого телефона своё окно; один ярлык открывает все подключённые."],
+      ["Кабель или Wi-Fi", "По кабелю, по Wi-Fi после одного подключения кабелем и по Wi-Fi без кабеля на Android 11 и новее."],
+      ["Отчёт о телефоне", "Программа сама собирает сведения о телефоне (серийные номера и адреса скрыты) и подсказывает, что включить."],
+      ["Русский, украинский, английский", "Установщик и программа выбирают язык по языку Windows. Подробная инструкция встроена."]
+    ],
+    steps: [
+      "Запусти установщик.",
+      "На телефоне один раз включи режим разработчика («Для разработчиков»: Настройки, О телефоне, 7 раз нажать «Номер сборки») и «Отладку по USB».",
+      "Подключи телефон кабелем, разреши отладку («Разрешить отладку по USB?») и запусти ярлык «Окно (кабель)»."
+    ],
+    reqs: [
+      "Windows 10 или 11.",
+      "Телефон Android 5.0 или новее (копировать и вставлять с Android 7).",
+      "Кабель, который передаёт данные, а не только заряжает."
+    ],
+    lims: [
+      "iPhone не поддерживается.",
+      "Телефоны Xiaomi, Redmi, POCO требуют включить «Отладку по USB (настройки безопасности)», чтобы работали мышь и клавиатура.",
+      "Часть банковских приложений не любит включённую «Отладку по USB» и может отказаться открываться: это решает само приложение.",
+      "Звонки и приложения, которые запрещают запись своего звука, в окне не слышны.",
+      "Проверено на Samsung Galaxy S9, A7 и A14."
+    ]
+  }
+};
+function esc(s){return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;")}
+function setLang(l){
+  var d = I18N[l] || I18N.en;
+  document.documentElement.lang = l;
+  document.title = d.name;
+  var nodes = document.querySelectorAll("[data-i]");
+  for (var i = 0; i < nodes.length; i++){ var k = nodes[i].getAttribute("data-i"); if (d[k] != null) nodes[i].textContent = d[k]; }
+  document.getElementById("features").innerHTML = d.features.map(function(f){return '<div class="card"><b>'+esc(f[0])+'</b>'+esc(f[1])+'</div>'}).join("");
+  document.getElementById("steps").innerHTML = d.steps.map(function(s){return '<li>'+esc(s)+'</li>'}).join("");
+  document.getElementById("reqs").innerHTML = d.reqs.map(function(s){return '<li>'+esc(s)+'</li>'}).join("");
+  document.getElementById("lims").innerHTML = d.lims.map(function(s){return '<li>'+esc(s)+'</li>'}).join("");
+  document.getElementById("img_installer").src = "installer_" + l + ".png";
+  document.getElementById("img_buttons").src = "buttons_" + l + ".png";
+  var b = document.querySelectorAll(".langs button");
+  for (var j = 0; j < b.length; j++) b[j].setAttribute("aria-pressed", b[j].getAttribute("data-lang") === l ? "true" : "false");
+  try { localStorage.setItem("piws-lang", l); } catch (e) {}
+}
+(function(){
+  var b = document.querySelectorAll(".langs button");
+  for (var i = 0; i < b.length; i++) b[i].addEventListener("click", function(){ setLang(this.getAttribute("data-lang")); });
+  var l = null;
+  try { l = localStorage.getItem("piws-lang"); } catch (e) {}
+  if (!I18N[l]) {
+    var n = (navigator.language || "en").slice(0, 2).toLowerCase();
+    l = n === "uk" ? "uk" : (n === "ru" || n === "be" ? "ru" : "en");
+  }
+  setLang(l);
+})();
+</script>
+</body>
+</html>
