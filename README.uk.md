@@ -52,3 +52,11 @@
 
 - Telegram-канал: [t.me/PhoneInWindowSound](https://t.me/PhoneInWindowSound)
 - Сайт: [drugoj00.github.io/phone-in-window-with-sound](https://drugoj00.github.io/phone-in-window-with-sound/)
+
+## Підтримати проєкт
+
+Програма безкоштовна. Якщо вона тобі корисна, можеш підтримати розвиток USDT, лише мережа TRON (TRC20) (монети, надіслані іншою мережею, буде втрачено):
+
+```
+TXk32CLkwJryTqhmkw6urcM5CacJgPsSpJ
+```
