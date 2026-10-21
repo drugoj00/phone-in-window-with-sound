@@ -54,6 +54,12 @@ ul.plain li{margin:6px 0}
 .note{background:var(--warn);color:var(--warn-ink);border-radius:12px;padding:14px 18px;margin-top:14px;font-size:16px}
 footer{margin-top:56px;padding:28px 0 40px;border-top:1px solid var(--line);color:var(--muted);font-size:15px}
 footer .links{display:flex;gap:18px;flex-wrap:wrap;margin-bottom:10px}
+.donate{display:flex;gap:20px;align-items:center;flex-wrap:wrap}
+.donate img{width:180px;height:180px;border-radius:10px;background:#fff;padding:6px}
+.donate .body{flex:1;min-width:240px}
+code#addr{display:block;word-break:break-all;background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:10px 12px;margin:8px 0;font:15px/1.4 Consolas,monospace}
+button#copy{background:var(--accent);color:var(--accent-ink);border:0;border-radius:10px;padding:10px 18px;font:inherit;font-weight:600;cursor:pointer}
+.donate p{margin:8px 0 0;font-size:15px;color:var(--muted)}
 </style>
 </head>
 <body>
@@ -107,6 +113,20 @@ footer .links{display:flex;gap:18px;flex-wrap:wrap;margin-bottom:10px}
     <div class="note" data-i="smart">The installer is not signed with a publisher certificate yet, so Windows may show a SmartScreen warning ("unknown publisher"): click "More info" and then "Run anyway" if you downloaded the file from here. The SHA-256 checksum is in the description of every release.</div>
   </section>
 
+  <section id="donate">
+    <h2 data-i="d_h">Support the project</h2>
+    <p data-i="d_p">The program is free. If it is useful to you, you can support its development with USDT.</p>
+    <div class="card donate">
+      <img src="donate_usdt_trc20.png" alt="QR code of the USDT TRC20 address" width="180" height="180">
+      <div class="body">
+        <b data-i="d_net">USDT, network TRON (TRC20)</b>
+        <code id="addr">TXk32CLkwJryTqhmkw6urcM5CacJgPsSpJ</code>
+        <button id="copy" type="button" data-i="d_copy">Copy address</button>
+        <p data-i="d_warn">Send only USDT through the TRON (TRC20) network: coins sent through another network are lost. The transfer is public on the blockchain.</p>
+      </div>
+    </div>
+  </section>
+
   <section>
     <h2 data-i="mk_h">What it is made of</h2>
     <ul class="plain">
@@ -143,6 +163,7 @@ var I18N = {
     st_h: "Getting started", rq_h: "What you need", lm_h: "Limitations",
     smart: "The installer is not signed with a publisher certificate yet, so Windows may show a SmartScreen warning (\"unknown publisher\"): click \"More info\" and then \"Run anyway\" if you downloaded the file from here. The SHA-256 checksum is in the description of every release.",
     mk_h: "What it is made of",
+    d_h: "Support the project", d_p: "The program is free. If it is useful to you, you can support its development with USDT.", d_net: "USDT, network TRON (TRC20)", d_copy: "Copy address", d_ok: "Copied", d_warn: "Send only USDT through the TRON (TRC20) network: coins sent through another network are lost. The transfer is public on the blockchain.",
     mk1: "shows the screen and passes your clicks and keystrokes to the phone.",
     mk2: "forwards the sound from Android 10.",
     mk3: "The wrapper (launcher, phone selection, window buttons, rotation, installer, phone report) is written separately and is not a Genymobile product.",
@@ -188,6 +209,7 @@ var I18N = {
     st_h: "Як почати", rq_h: "Що потрібно", lm_h: "Обмеження",
     smart: "Інсталятор поки не підписаний сертифікатом видавця, тому Windows може показати попередження SmartScreen («невідомий видавець»): натисни «Докладніше» і «Усе одно виконати», якщо завантажив файл звідси. Контрольну суму SHA-256 вказано в описі кожного релізу.",
     mk_h: "З чого складається",
+    d_h: "Підтримати проєкт", d_p: "Програма безкоштовна. Якщо вона тобі корисна, можеш підтримати розвиток USDT.", d_net: "USDT, мережа TRON (TRC20)", d_copy: "Скопіювати адресу", d_ok: "Скопійовано", d_warn: "Надсилай лише USDT через мережу TRON (TRC20): монети, надіслані іншою мережею, буде втрачено. Переказ публічний у блокчейні.",
     mk1: "показує екран і передає натискання.",
     mk2: "передає звук з Android 10.",
     mk3: "Оболонка (запуск, вибір телефона, кнопки біля вікна, поворот, інсталятор, звіт про телефон) написана окремо й не є продуктом Genymobile.",
@@ -233,6 +255,7 @@ var I18N = {
     st_h: "Как начать", rq_h: "Что нужно", lm_h: "Ограничения",
     smart: "Установщик пока не подписан сертификатом издателя, поэтому Windows может показать предупреждение SmartScreen («неизвестный издатель»): нажми «Подробнее» и «Выполнить в любом случае», если скачал файл отсюда. Контрольная сумма SHA-256 указана в описании каждого релиза.",
     mk_h: "Из чего состоит",
+    d_h: "Поддержать проект", d_p: "Программа бесплатная. Если она тебе полезна, можешь поддержать развитие USDT.", d_net: "USDT, сеть TRON (TRC20)", d_copy: "Скопировать адрес", d_ok: "Скопировано", d_warn: "Отправляй только USDT через сеть TRON (TRC20): монеты, отправленные другой сетью, будут потеряны. Перевод публичный в блокчейне.",
     mk1: "показывает экран и передаёт нажатия.",
     mk2: "передаёт звук с Android 10.",
     mk3: "Оболочка (запуск, выбор телефона, кнопки у окна, поворот, установщик, отчёт о телефоне) написана отдельно и не является продуктом Genymobile.",
@@ -285,6 +308,11 @@ function setLang(l){
   try { localStorage.setItem("piws-lang", l); } catch (e) {}
 }
 (function(){
+  document.getElementById("copy").addEventListener("click", function(){
+    var t = document.getElementById("addr").textContent, self = this, d = I18N[document.documentElement.lang] || I18N.en, old = d.d_copy;
+    function done(){ self.textContent = d.d_ok; setTimeout(function(){ self.textContent = (I18N[document.documentElement.lang] || I18N.en).d_copy; }, 1500); }
+    if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(t).then(done, function(){});
+  });
   var b = document.querySelectorAll(".langs button");
   for (var i = 0; i < b.length; i++) b[i].addEventListener("click", function(){ setLang(this.getAttribute("data-lang")); });
   var l = null;
