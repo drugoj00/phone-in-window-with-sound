@@ -52,3 +52,11 @@ The installer is about 31 MB: scrcpy with audio is already inside, so you don't 
 
 - Telegram channel: [t.me/PhoneInWindowSound](https://t.me/PhoneInWindowSound)
 - Website: [drugoj00.github.io/phone-in-window-with-sound](https://drugoj00.github.io/phone-in-window-with-sound/)
+
+## Support the project
+
+The program is free. If it is useful to you, you can support its development with USDT, network TRON (TRC20) only (coins sent through another network are lost):
+
+```
+TXk32CLkwJryTqhmkw6urcM5CacJgPsSpJ
+```
