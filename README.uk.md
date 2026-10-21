@@ -47,3 +47,8 @@
 - [scrcpy](https://github.com/Genymobile/scrcpy) (Genymobile, ліцензія Apache 2.0): показує екран і передає натискання.
 - [sndcpy](https://github.com/rom1v/sndcpy) (Romain Vimont, ліцензія Apache 2.0): передає звук з Android 10.
 - Оболонка (запуск, вибір телефона, кнопки біля вікна, поворот, звук для Android 10, інсталятор, звіт про телефон) написана окремо й не є продуктом Genymobile.
+
+## Новини та підтримка
+
+- Telegram-канал: [t.me/PhoneInWindowSound](https://t.me/PhoneInWindowSound)
+- Сайт: [drugoj00.github.io/phone-in-window-with-sound](https://drugoj00.github.io/phone-in-window-with-sound/)
