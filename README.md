@@ -1,47 +1,49 @@
-# Телефон в окне
+[English](README.md) · [Українська](README.uk.md) · [Русский](README.ru.md)
 
-Показывает настоящий экран телефона Android в окне на компьютере с Windows. В окне можно нажимать мышью, печатать с клавиатуры и слушать звук телефона через компьютер. Приложения работают на самом телефоне, компьютер только показывает экран и передаёт нажатия, поэтому банковские приложения, мессенджеры и всё остальное ведут себя как обычно.
+# Phone in Window with Sound
 
-## Скачать
+Shows the real screen of an Android phone in a window on a Windows PC. You can click with the mouse, type on the keyboard and listen to the phone's sound through the computer. Apps keep running on the phone itself; the computer only shows the screen and sends your input, so banking apps, messengers and everything else behave as usual.
 
-**[Последняя версия: TelefonVOkne-Setup.exe](https://github.com/drugoj00/telefon-v-okne/releases/latest)** (раздел Assets).
+## Download
 
-Установщик весит около 31 МБ: внутри уже есть scrcpy со звуком, интернет для установки не нужен, права администратора не нужны. Контрольная сумма SHA-256 файла указана в описании каждого релиза.
+**[Latest version: PhoneInWindowWithSound-Setup.exe](https://github.com/drugoj00/phone-in-window-with-sound/releases/latest)** (Assets section).
 
-## Что умеет
+The installer is about 31 MB: scrcpy with audio is already inside, so you don't need the internet to install, and you don't need administrator rights. The SHA-256 checksum of the file is listed in the description of each release. The installer works on Windows 10 and 11. The program is available in English, Ukrainian and Russian and picks the language from your Windows language.
 
-- Мышь и клавиатура: щелчок как касание, колесо как прокрутка, печать прямо в поля телефона.
-- Звук телефона на компьютере: Android 11 и новее сразу, Android 10 через маленькое приложение sndcpy (ставится само). На Android 9 и старше звука нет.
-- Четыре кнопки у окна: копировать, вставить (в том числе русский текст), повернуть экран, погасить экран телефона.
-- Телефон не засыпает и не блокируется, пока окно открыто; картинка и звук не пропадают.
-- Несколько телефонов одновременно: у каждого своё окно, ярлык «Окна (все)» открывает все подключённые.
-- Подключение по кабелю, по Wi-Fi после одного подключения кабелем и по Wi-Fi без кабеля на Android 11 и новее.
-- Отчёт о телефоне: программа сама собирает сведения (серийные номера и адреса скрыты) и подсказывает, что включить.
-- Подробная инструкция и проверка обновлений scrcpy внутри программы.
+## Features
 
-## Как начать
+- Mouse and keyboard: a click works as a tap, the wheel scrolls, and you can type straight into the phone's text fields.
+- Phone sound on the computer: Android 11 and newer out of the box, Android 10 through the small sndcpy app (installed automatically). There is no sound on Android 9 and older.
+- Four buttons beside the window: Copy, Paste (text in any language), Rotate and Turn off screen (turns off the phone's screen).
+- The phone does not fall asleep or lock while the window is open; the picture and sound don't drop out.
+- Several phones at once: each gets its own window, and the "Windows (all)" shortcut opens all connected phones.
+- Connection by cable, by Wi-Fi after connecting once with a cable, and by Wi-Fi without a cable on Android 11 and newer.
+- Phone report: the program collects information about the phone (serial numbers and addresses are hidden) and tells you what to turn on.
+- A detailed guide and a "Check for updates" option for scrcpy are built into the program.
 
-1. Запустите установщик.
-2. На телефоне один раз включите режим разработчика (Настройки, О телефоне, 7 раз нажать «Номер сборки») и «Отладку по USB».
-3. Подключите телефон кабелем, разрешите отладку и запустите ярлык «Окно (кабель)».
+## Getting started
 
-## Что нужно
+1. Run the installer.
+2. On the phone, turn on Developer options once (Settings, About phone, tap "Build number" 7 times) and "USB debugging".
+3. Connect the phone with a cable, allow debugging ("Allow USB debugging?") and launch the "Window (cable)" shortcut.
 
-- Windows 10 или 11.
-- Телефон Android 5.0 или новее (копировать и вставлять с Android 7).
-- Кабель, который передаёт данные, а не только заряжает.
+## Requirements
 
-## Ограничения
+- Windows 10 or 11.
+- An Android 5.0 or newer phone (copy and paste work from Android 7).
+- A cable that carries data, not just charge.
 
-- iPhone не поддерживается.
-- Телефоны Xiaomi, Redmi, POCO требуют включить «Отладку по USB (настройки безопасности)», чтобы работали мышь и клавиатура.
-- Часть банковских приложений не любит включённую «Отладку по USB» и может отказаться открываться: это решает само приложение.
-- Звонки и приложения, которые запрещают запись своего звука, в окне не слышны.
-- Проверено на Samsung Galaxy S9, A7 и A14.
-- Установщик пока не подписан сертификатом издателя, поэтому Windows может показать предупреждение SmartScreen («неизвестный издатель»): нажмите «Подробнее» и «Выполнить в любом случае», если скачали файл отсюда.
+## Limitations
 
-## Из чего состоит
+- iPhone is not supported.
+- Xiaomi, Redmi and POCO phones need "USB debugging (Security settings)" turned on, otherwise the mouse and keyboard won't work.
+- Some banking apps don't like "USB debugging" being on and may refuse to open: that is up to the app itself.
+- Phone calls and apps that forbid recording their sound can't be heard in the window.
+- Tested on Samsung Galaxy S9, A7 and A14.
+- The installer is not signed with a publisher certificate yet, so Windows may show a SmartScreen warning ("unknown publisher"): click "More info" and then "Run anyway" if you downloaded the file from here.
 
-- [scrcpy](https://github.com/Genymobile/scrcpy) (Genymobile, лицензия Apache 2.0): показывает экран и передаёт нажатия.
-- [sndcpy](https://github.com/rom1v/sndcpy) (Romain Vimont, лицензия Apache 2.0): передаёт звук с Android 10.
-- Оболочка (запуск, выбор телефона, кнопки у окна, поворот, звук для Android 10, установщик, отчёт о телефоне) написана отдельно и не является продуктом Genymobile.
+## What it is made of
+
+- [scrcpy](https://github.com/Genymobile/scrcpy) (Genymobile, Apache 2.0 license): shows the screen and passes your clicks and keystrokes to the phone.
+- [sndcpy](https://github.com/rom1v/sndcpy) (Romain Vimont, Apache 2.0 license): forwards the sound from Android 10.
+- The wrapper (launcher, phone selection, window buttons, rotation, sound for Android 10, installer, phone report) is written separately and is not a Genymobile product.
