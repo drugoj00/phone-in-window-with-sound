@@ -6,15 +6,15 @@ Shows the real screen of an Android phone in a window on a Windows PC. You can c
 
 ## Download
 
-**[Latest version: PhoneInWindowWithSound.exe](https://github.com/drugoj00/phone-in-window-with-sound/releases/latest)** (Assets section).
+**Current version: 1.0.** **[Latest version: PhoneInWindowWithSound.exe](https://github.com/drugoj00/phone-in-window-with-sound/releases/latest)** (Assets section). [All versions](https://github.com/drugoj00/phone-in-window-with-sound/releases).
 
-The installer is about 31 MB: scrcpy with audio is already inside, so you don't need the internet to install, and you don't need administrator rights. The SHA-256 checksum of the file is listed in the description of each release. The installer works on Windows 10 and 11. The program is available in English, Ukrainian and Russian and picks the language from your Windows language.
+The installer is about 31 MB: scrcpy with audio is already inside, so you don't need the internet to install, and administrator rights are optional. The SHA-256 checksum of the file is listed in the description of each release. The installer works on Windows 10 and 11. The program is available in English, Ukrainian and Russian and picks the language from your Windows language.
 
 ## Features
 
 - Mouse and keyboard: a click works as a tap, the wheel scrolls, and you can type straight into the phone's text fields.
 - Phone sound on the computer: Android 11 and newer out of the box, Android 10 through the small sndcpy app (installed automatically). There is no sound on Android 9 and older.
-- Four buttons beside the window: Copy, Paste (text in any language), Rotate and Turn off screen (turns off the phone's screen).
+- Five buttons beside the window: Copy, Paste (text in any language), Rotate, Turn off screen (turns off the phone's screen) and About / Support. In a portrait window they sit in a vertical strip to the right of the window (in the colour of its title bar), in landscape in the title bar.
 - The phone does not fall asleep or lock while the window is open; the picture and sound don't drop out.
 - Several phones at once: each gets its own window, and the "Windows (all)" shortcut opens all connected phones.
 - Connection by cable, by Wi-Fi after connecting once with a cable, and by Wi-Fi without a cable on Android 11 and newer.
@@ -56,6 +56,10 @@ The installer is about 31 MB: scrcpy with audio is already inside, so you don't 
 ## Support the project
 
 The program is free. If it is useful to you, you can support its development with USDT, network TRON (TRC20) only (coins sent through another network are lost):
+
+- By card or Google Pay (any amount from 50 UAH): https://secure.wayforpay.com/button/bba92579a4647
+
+USDT (TRON/TRC20):
 
 ```
 TXk32CLkwJryTqhmkw6urcM5CacJgPsSpJ
