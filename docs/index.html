@@ -60,6 +60,8 @@ footer .links{display:flex;gap:18px;flex-wrap:wrap;margin-bottom:10px}
 code#addr{display:block;word-break:break-all;background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:10px 12px;margin:8px 0;font:15px/1.4 Consolas,monospace}
 button#copy{background:var(--accent);color:var(--accent-ink);border:0;border-radius:10px;padding:10px 18px;font:inherit;font-weight:600;cursor:pointer}
 .donate p{margin:8px 0 0;font-size:15px;color:var(--muted)}
+.btn-card{display:inline-block;background:var(--accent);color:var(--accent-ink);text-decoration:none;font-weight:700;border-radius:10px;padding:10px 18px;margin:8px 0}
+.donate+.donate{margin-top:14px}
 </style>
 </head>
 <body>
@@ -79,7 +81,7 @@ button#copy{background:var(--accent);color:var(--accent-ink);border:0;border-rad
       <a class="btn" id="dl" href="https://github.com/drugoj00/phone-in-window-with-sound/releases/latest/download/PhoneInWindowWithSound.exe" data-i="dl">Download for Windows</a>
       <a class="btn ghost" href="https://github.com/drugoj00/phone-in-window-with-sound" data-i="gh">View on GitHub</a>
     </div>
-    <p class="small" data-i="dlnote">PhoneInWindowWithSound.exe, about 31 MB. Free. No internet and no administrator rights needed. Windows 10 and 11.</p>
+    <p class="small" data-i="dlnote">Current version: 1.0. PhoneInWindowWithSound.exe, about 31 MB. Free. No internet needed, administrator rights are optional. Windows 10 and 11.</p>
   </div>
 </header>
 
@@ -94,6 +96,7 @@ button#copy{background:var(--accent);color:var(--accent-ink);border:0;border-rad
     <div class="shots">
       <figure><img id="img_installer" src="installer_en.png" alt="Installer window" width="1280" height="1000"><figcaption data-i="s_c1">The installer: everything is inside, one click to install.</figcaption></figure>
       <figure><img id="img_buttons" src="buttons_en.png" alt="Window buttons" width="1664" height="690"><figcaption data-i="s_c2">Four buttons beside every phone window: Copy, Paste, Rotate, Turn off screen. Illustration, not a real phone screen.</figcaption></figure>
+      <figure><img id="img_about" src="about_en.png" alt="About window" width="1226" height="871"><figcaption data-i="s_c3">The "i" button opens the About window: links to the Telegram channel, GitHub and this site, and an address for supporting the project.</figcaption></figure>
     </div>
   </section>
 
@@ -116,6 +119,14 @@ button#copy{background:var(--accent);color:var(--accent-ink);border:0;border-rad
   <section id="donate">
     <h2 data-i="d_h">Support the project</h2>
     <p data-i="d_p">The program is free. If it is useful to you, you can support its development with USDT.</p>
+    <div class="card donate">
+      <img src="donate_card_qr.png" alt="QR code of the card payment page" width="180" height="180">
+      <div class="body">
+        <b data-i="c_net">By card or Google Pay</b><br>
+        <a class="btn-card" href="https://secure.wayforpay.com/button/bba92579a4647" data-i="c_btn">Support by card</a>
+        <p data-i="c_warn">Any amount from 50 UAH (about 1 USD), cards from any country. The payment is processed by WayForPay, your card data never reaches us.</p>
+      </div>
+    </div>
     <div class="card donate">
       <img src="donate_usdt_trc20.png" alt="QR code of the USDT TRC20 address" width="180" height="180">
       <div class="body">
@@ -156,14 +167,15 @@ var I18N = {
     h1: "Your Android phone in a Windows window, with sound",
     lead: "See the real phone screen on your PC, click with the mouse, type on the keyboard and listen to the phone through the computer. Apps keep running on the phone, so banking apps and messengers behave as usual.",
     dl: "Download for Windows", gh: "View on GitHub",
-    dlnote: "PhoneInWindowWithSound.exe, about 31 MB. Free. No internet and no administrator rights needed. Windows 10 and 11.",
+    dlnote: "Current version: 1.0. PhoneInWindowWithSound.exe, about 31 MB. Free. No internet needed, administrator rights are optional. Windows 10 and 11.",
     f_h: "What it does", s_h: "How it looks",
     s_c1: "The installer: everything is inside, one click to install.",
-    s_c2: "Four buttons beside every phone window: Copy, Paste, Rotate, Turn off screen. Illustration, not a real phone screen.",
+    s_c2: "Five buttons for every phone window: Copy, Paste, Rotate, Turn off screen and About. In portrait they sit in a strip beside the window, in landscape in the title bar. Illustration, not a real phone screen.",
+    s_c3: "The \"i\" button opens the About window: links to the Telegram channel, GitHub and this site, and an address for supporting the project.",
     st_h: "Getting started", rq_h: "What you need", lm_h: "Limitations",
     smart: "The installer is not signed with a publisher certificate yet, so Windows may show a SmartScreen warning (\"unknown publisher\"): click \"More info\" and then \"Run anyway\" if you downloaded the file from here. The SHA-256 checksum is in the description of every release.",
     mk_h: "What it is made of",
-    d_h: "Support the project", d_p: "The program is free. If it is useful to you, you can support its development with USDT.", d_net: "USDT, network TRON (TRC20)", d_copy: "Copy address", d_ok: "Copied", d_warn: "Send only USDT through the TRON (TRC20) network: coins sent through another network are lost. The transfer is public on the blockchain.",
+    c_net: "By card or Google Pay", c_btn: "Support by card", c_warn: "Any amount from 50 UAH (about 1 USD), cards from any country. The payment is processed by WayForPay, your card data never reaches us.", d_h: "Support the project", d_p: "The program is free. If it is useful to you, you can support its development by card, Google Pay or USDT.", d_net: "USDT, network TRON (TRC20)", d_copy: "Copy address", d_ok: "Copied", d_warn: "Send only USDT through the TRON (TRC20) network: coins sent through another network are lost. The transfer is public on the blockchain.",
     mk1: "shows the screen and passes your clicks and keystrokes to the phone.",
     mk2: "forwards the sound from Android 10.",
     mk3: "The wrapper (launcher, phone selection, window buttons, rotation, installer, phone report) is written separately and is not a Genymobile product.",
@@ -172,7 +184,7 @@ var I18N = {
     features: [
       ["Mouse and keyboard", "A click works as a tap, the wheel scrolls, and you can type straight into the phone's text fields."],
       ["Phone sound on the computer", "Android 11 and newer out of the box, Android 10 through the small sndcpy app (installed automatically). No sound on Android 9 and older."],
-      ["Four buttons beside the window", "Copy, Paste (text in any language), Rotate and Turn off screen."],
+      ["Five buttons beside the window", "Copy, Paste (text in any language), Rotate, Turn off screen and About / Support."],
       ["The phone stays awake", "It does not fall asleep or lock while the window is open; the picture and sound don't drop out."],
       ["Several phones at once", "Each phone gets its own window; one shortcut opens all connected phones."],
       ["Cable or Wi-Fi", "By cable, by Wi-Fi after connecting once with a cable, and by Wi-Fi without a cable on Android 11 and newer."],
@@ -202,14 +214,15 @@ var I18N = {
     h1: "Твій Android-телефон у вікні Windows, зі звуком",
     lead: "Справжній екран телефона на комп'ютері: клацай мишею, друкуй з клавіатури й слухай звук телефона через комп'ютер. Застосунки працюють на самому телефоні, тому банківські застосунки й месенджери поводяться як зазвичай.",
     dl: "Завантажити для Windows", gh: "Сторінка на GitHub",
-    dlnote: "PhoneInWindowWithSound.exe, близько 31 МБ. Безкоштовно. Інтернет і права адміністратора не потрібні. Windows 10 і 11.",
+    dlnote: "Поточна версія: 1.0. PhoneInWindowWithSound.exe, близько 31 МБ. Безкоштовно. Інтернет і права адміністратора не обов’язкові. Windows 10 і 11.",
     f_h: "Що вміє", s_h: "Як це виглядає",
     s_c1: "Інсталятор: усе вже всередині, встановлення одним натисканням.",
-    s_c2: "Чотири кнопки біля кожного вікна телефона: Копіювати, Вставити, Повернути, Погасити екран. Ілюстрація, не справжній екран телефона.",
+    s_c2: "П’ять кнопок біля кожного вікна телефона: Копіювати, Вставити, Повернути, Погасити екран і Про програму. У портреті вони в смузі збоку від вікна, в альбомі в заголовку. Ілюстрація, не справжній екран телефона.",
+    s_c3: "Кнопка «i» відкриває вікно «Про програму»: посилання на Telegram-канал, GitHub і сайт та адреса для підтримки проєкту.",
     st_h: "Як почати", rq_h: "Що потрібно", lm_h: "Обмеження",
     smart: "Інсталятор поки не підписаний сертифікатом видавця, тому Windows може показати попередження SmartScreen («невідомий видавець»): натисни «Докладніше» і «Усе одно виконати», якщо завантажив файл звідси. Контрольну суму SHA-256 вказано в описі кожного релізу.",
     mk_h: "З чого складається",
-    d_h: "Підтримати проєкт", d_p: "Програма безкоштовна. Якщо вона тобі корисна, можеш підтримати розвиток USDT.", d_net: "USDT, мережа TRON (TRC20)", d_copy: "Скопіювати адресу", d_ok: "Скопійовано", d_warn: "Надсилай лише USDT через мережу TRON (TRC20): монети, надіслані іншою мережею, буде втрачено. Переказ публічний у блокчейні.",
+    c_net: "Карткою або Google Pay", c_btn: "Підтримати карткою", c_warn: "Будь-яка сума від 50 грн (приблизно 1 долар), картки будь-якої країни. Платіж обробляє WayForPay, дані картки до нас не потрапляють.", d_h: "Підтримати проєкт", d_p: "Програма безкоштовна. Якщо вона тобі корисна, можеш підтримати розвиток карткою, Google Pay або USDT.", d_net: "USDT, мережа TRON (TRC20)", d_copy: "Скопіювати адресу", d_ok: "Скопійовано", d_warn: "Надсилай лише USDT через мережу TRON (TRC20): монети, надіслані іншою мережею, буде втрачено. Переказ публічний у блокчейні.",
     mk1: "показує екран і передає натискання.",
     mk2: "передає звук з Android 10.",
     mk3: "Оболонка (запуск, вибір телефона, кнопки біля вікна, поворот, інсталятор, звіт про телефон) написана окремо й не є продуктом Genymobile.",
@@ -218,7 +231,7 @@ var I18N = {
     features: [
       ["Миша і клавіатура", "Клацання як дотик, колесо як прокручування, друк просто в поля телефона."],
       ["Звук телефона на комп'ютері", "Android 11 і новіші одразу, Android 10 через маленький застосунок sndcpy (встановлюється сам). На Android 9 і старіших звуку немає."],
-      ["Чотири кнопки біля вікна", "Копіювати, Вставити (текст будь-якою мовою), Повернути й Погасити екран."],
+      ["П’ять кнопок біля вікна", "Копіювати, Вставити (текст будь-якою мовою), Повернути, Погасити екран і Про програму / Підтримати."],
       ["Телефон не засинає", "Не засинає і не блокується, поки вікно відкрите; картинка і звук не зникають."],
       ["Кілька телефонів одночасно", "У кожного телефона своє вікно; один ярлик відкриває всі підключені."],
       ["Кабель або Wi-Fi", "Кабелем, по Wi-Fi після одного підключення кабелем і по Wi-Fi без кабелю на Android 11 і новіших."],
@@ -248,14 +261,15 @@ var I18N = {
     h1: "Твой Android-телефон в окне Windows, со звуком",
     lead: "Настоящий экран телефона на компьютере: щёлкай мышью, печатай с клавиатуры и слушай звук телефона через компьютер. Приложения работают на самом телефоне, поэтому банковские приложения и мессенджеры ведут себя как обычно.",
     dl: "Скачать для Windows", gh: "Страница на GitHub",
-    dlnote: "PhoneInWindowWithSound.exe, около 31 МБ. Бесплатно. Интернет и права администратора не нужны. Windows 10 и 11.",
+    dlnote: "Текущая версия: 1.0. PhoneInWindowWithSound.exe, около 31 МБ. Бесплатно. Интернет и права администратора не обязательны. Windows 10 и 11.",
     f_h: "Что умеет", s_h: "Как это выглядит",
     s_c1: "Установщик: всё уже внутри, установка одним нажатием.",
-    s_c2: "Четыре кнопки у каждого окна телефона: Копировать, Вставить, Повернуть, Погасить экран. Иллюстрация, не настоящий экран телефона.",
+    s_c2: "Пять кнопок у каждого окна телефона: Копировать, Вставить, Повернуть, Погасить экран и О программе. В портрете они в полосе сбоку от окна, в альбоме в заголовке. Иллюстрация, не настоящий экран телефона.",
+    s_c3: "Кнопка «i» открывает окно «О программе»: ссылки на Telegram-канал, GitHub и сайт и адрес для поддержки проекта.",
     st_h: "Как начать", rq_h: "Что нужно", lm_h: "Ограничения",
     smart: "Установщик пока не подписан сертификатом издателя, поэтому Windows может показать предупреждение SmartScreen («неизвестный издатель»): нажми «Подробнее» и «Выполнить в любом случае», если скачал файл отсюда. Контрольная сумма SHA-256 указана в описании каждого релиза.",
     mk_h: "Из чего состоит",
-    d_h: "Поддержать проект", d_p: "Программа бесплатная. Если она тебе полезна, можешь поддержать развитие USDT.", d_net: "USDT, сеть TRON (TRC20)", d_copy: "Скопировать адрес", d_ok: "Скопировано", d_warn: "Отправляй только USDT через сеть TRON (TRC20): монеты, отправленные другой сетью, будут потеряны. Перевод публичный в блокчейне.",
+    c_net: "Картой или Google Pay", c_btn: "Поддержать картой", c_warn: "Любая сумма от 50 грн (примерно 1 доллар), карты любой страны. Платёж обрабатывает WayForPay, данные карты к нам не попадают.", d_h: "Поддержать проект", d_p: "Программа бесплатная. Если она тебе полезна, можешь поддержать развитие картой, Google Pay или USDT.", d_net: "USDT, сеть TRON (TRC20)", d_copy: "Скопировать адрес", d_ok: "Скопировано", d_warn: "Отправляй только USDT через сеть TRON (TRC20): монеты, отправленные другой сетью, будут потеряны. Перевод публичный в блокчейне.",
     mk1: "показывает экран и передаёт нажатия.",
     mk2: "передаёт звук с Android 10.",
     mk3: "Оболочка (запуск, выбор телефона, кнопки у окна, поворот, установщик, отчёт о телефоне) написана отдельно и не является продуктом Genymobile.",
@@ -264,7 +278,7 @@ var I18N = {
     features: [
       ["Мышь и клавиатура", "Щелчок как касание, колесо как прокрутка, печать прямо в поля телефона."],
       ["Звук телефона на компьютере", "Android 11 и новее сразу, Android 10 через маленькое приложение sndcpy (ставится само). На Android 9 и старше звука нет."],
-      ["Четыре кнопки у окна", "Копировать, Вставить (текст на любом языке), Повернуть и Погасить экран."],
+      ["Пять кнопок у окна", "Копировать, Вставить (текст на любом языке), Повернуть, Погасить экран и О программе / Поддержать."],
       ["Телефон не засыпает", "Не засыпает и не блокируется, пока окно открыто; картинка и звук не пропадают."],
       ["Несколько телефонов одновременно", "У каждого телефона своё окно; один ярлык открывает все подключённые."],
       ["Кабель или Wi-Fi", "По кабелю, по Wi-Fi после одного подключения кабелем и по Wi-Fi без кабеля на Android 11 и новее."],
@@ -303,6 +317,7 @@ function setLang(l){
   document.getElementById("lims").innerHTML = d.lims.map(function(s){return '<li>'+esc(s)+'</li>'}).join("");
   document.getElementById("img_installer").src = "installer_" + l + ".png";
   document.getElementById("img_buttons").src = "buttons_" + l + ".png";
+  document.getElementById("img_about").src = "about_" + l + ".png";
   var b = document.querySelectorAll(".langs button");
   for (var j = 0; j < b.length; j++) b[j].setAttribute("aria-pressed", b[j].getAttribute("data-lang") === l ? "true" : "false");
   try { localStorage.setItem("piws-lang", l); } catch (e) {}
