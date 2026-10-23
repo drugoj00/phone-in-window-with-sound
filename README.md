@@ -6,7 +6,7 @@ Shows the real screen of an Android phone in a window on a Windows PC. You can c
 
 ## Download
 
-**Current version: 1.0.** **[Latest version: PhoneInWindowWithSound.exe](https://github.com/drugoj00/phone-in-window-with-sound/releases/latest)** (Assets section). [All versions](https://github.com/drugoj00/phone-in-window-with-sound/releases).
+**Current version: 1.0.** **[Latest version: PhoneInWindowWithSound-1.0.exe](https://github.com/drugoj00/phone-in-window-with-sound/releases/latest)** (Assets section). [All versions](https://github.com/drugoj00/phone-in-window-with-sound/releases).
 
 The installer is about 31 MB: scrcpy with audio is already inside, so you don't need the internet to install, and administrator rights are optional. The SHA-256 checksum of the file is listed in the description of each release. The installer works on Windows 10 and 11. The program is available in English, Ukrainian and Russian and picks the language from your Windows language.
 
