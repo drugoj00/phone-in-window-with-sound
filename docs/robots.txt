@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://drugoj00.github.io/phone-in-window-with-sound/sitemap.xml
