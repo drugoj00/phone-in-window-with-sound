@@ -64,8 +64,9 @@ The installer is about 31 MB: scrcpy with audio is already inside, so you don't 
 
 ## Support the project
 
-The program is free. If it is useful to you, you can support its development with USDT, network TRON (TRC20) only (coins sent through another network are lost):
+The program is free. If it is useful to you, you can support its development by card, Google Pay or USDT. For USDT use the TRON (TRC20) network only (coins sent through another network are lost).
 
+- By card or Google Pay (any amount from 50 UAH): https://secure.wayforpay.com/button/bba92579a4647
 
 USDT (TRON/TRC20):
 
