@@ -4,6 +4,8 @@
 
 Shows the real screen of an Android phone in a window on a Windows PC. You can click with the mouse, type on the keyboard and listen to the phone's sound through the computer. Apps keep running on the phone itself; the computer only shows the screen and sends your input, so banking apps, messengers and everything else behave as usual.
 
+⭐ If the program is useful, please star this repository: it costs nothing and helps other people find it.
+
 ## Download
 
 **Current version: 1.0.** **[Latest version: PhoneInWindowWithSound-1.0.exe](https://github.com/drugoj00/phone-in-window-with-sound/releases/latest)** (Assets section). [All versions](https://github.com/drugoj00/phone-in-window-with-sound/releases).
