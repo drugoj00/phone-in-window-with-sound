@@ -70,7 +70,7 @@ button#copy{background:var(--accent);color:var(--accent-ink);border:0;border-rad
 .donate p{margin:8px 0 0;font-size:15px;color:var(--muted)}
 .btn-card{display:inline-block;background:var(--accent);color:var(--accent-ink);text-decoration:none;font-weight:700;border-radius:10px;padding:10px 18px;margin:8px 0}
 .donate+.donate{margin-top:14px}
-</style>
+.moreprog{display:flex;gap:18px;align-items:center;flex-wrap:wrap}.moreprog img{width:84px;height:84px;border-radius:16px}.moreprog .body{flex:1;min-width:240px}</style>
 </head>
 <body>
 <header class="hero">
@@ -126,6 +126,18 @@ button#copy{background:var(--accent);color:var(--accent-ink);border:0;border-rad
     <div class="note" data-i="smart">The installer is not signed with a publisher certificate yet, so Windows may show a SmartScreen warning ("unknown publisher"): click "More info" and then "Run anyway" if you downloaded the file from here. The SHA-256 checksum is in the description of every release.</div>
   </section>
 
+  <section id="more">
+    <h2 data-i="mp_h">More programs</h2>
+    <div class="card moreprog">
+      <img src="sl_icon.png" alt="" width="84" height="84">
+      <div class="body">
+        <b data-i="mp_t">Smart Life for Windows</b><br>
+        <span data-i="mp_d">Control Smart Life (Tuya) sockets from a Windows window: QR sign-in, timers, scenes, schedules. Free.</span><br>
+        <a class="btn-card" href="smart-life.html" data-i="mp_b">Open the page</a>
+      </div>
+    </div>
+  </section>
+
   <section id="donate">
     <h2 data-i="d_h">Support the project</h2>
     <p data-i="d_p">The program is free. If it is useful to you, you can support its development by card, Google Pay or USDT.</p>
@@ -177,6 +189,7 @@ button#copy{background:var(--accent);color:var(--accent-ink);border:0;border-rad
 <script>
 var I18N = {
   en: {
+    mp_h: "More programs", mp_t: "Smart Life for Windows", mp_d: "Control Smart Life (Tuya) sockets from a Windows window: QR sign-in, timers, scenes, schedules. Free.", mp_b: "Open the page",
     name: "Phone in Window with Sound",
     h1: "Your Android phone in a Windows window, with sound",
     lead: "See the real phone screen on your PC, click with the mouse, type on the keyboard and listen to the phone through the computer. Apps keep running on the phone, so banking apps and messengers behave as usual.",
@@ -227,6 +240,7 @@ var I18N = {
     ]
   },
   uk: {
+    mp_h: "Інші програми", mp_t: "Smart Life для Windows", mp_d: "Керуйте розетками Smart Life (Tuya) з вікна Windows: вхід за QR, таймери, сценарії, розклади. Безкоштовно.", mp_b: "Відкрити сторінку",
     name: "Телефон у вікні зі звуком",
     h1: "Твій Android-телефон у вікні Windows, зі звуком",
     lead: "Справжній екран телефона на комп'ютері: клацай мишею, друкуй з клавіатури й слухай звук телефона через комп'ютер. Застосунки працюють на самому телефоні, тому банківські застосунки й месенджери поводяться як зазвичай.",
@@ -277,6 +291,7 @@ var I18N = {
     ]
   },
   ru: {
+    mp_h: "Другие программы", mp_t: "Smart Life для Windows", mp_d: "Управляйте розетками Smart Life (Tuya) из окна Windows: вход по QR, таймеры, сценарии, расписания. Бесплатно.", mp_b: "Открыть страницу",
     name: "Телефон в окне со звуком",
     h1: "Твой Android-телефон в окне Windows, со звуком",
     lead: "Настоящий экран телефона на компьютере: щёлкай мышью, печатай с клавиатуры и слушай звук телефона через компьютер. Приложения работают на самом телефоне, поэтому банковские приложения и мессенджеры ведут себя как обычно.",
