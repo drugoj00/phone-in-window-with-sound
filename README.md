@@ -14,7 +14,8 @@ The installer is about 31 MB: scrcpy with audio is already inside, so you don't 
 
 - Mouse and keyboard: a click works as a tap, the wheel scrolls, and you can type straight into the phone's text fields.
 - Phone sound on the computer: Android 11 and newer out of the box, Android 10 through the small sndcpy app (installed automatically). There is no sound on Android 9 and older.
-- Five buttons beside the window: Copy, Paste (text in any language), Rotate, Turn off screen (turns off the phone's screen) and About / Support. In a portrait window they sit in a vertical strip to the right of the window (in the colour of its title bar), in landscape in the title bar.
+- Six buttons beside the window: Copy, Paste (text in any language), Rotate, Turn off screen (turns off the phone's screen), Tools and About / Support.
+- Tools menu: screenshot, screen recording with sound, phone files (download and send), apps (launch, stop, uninstall), install APK, connect over Wi-Fi in one click (the phone is remembered). Dragging an APK or any file onto the phone window also works. In a portrait window they sit in a vertical strip to the right of the window (in the colour of its title bar), in landscape in the title bar.
 - The phone does not fall asleep or lock while the window is open; the picture and sound don't drop out.
 - Several phones at once: each gets its own window, and the "Windows (all)" shortcut opens all connected phones.
 - Connection by cable, by Wi-Fi after connecting once with a cable, and by Wi-Fi without a cable on Android 11 and newer.
