@@ -6,7 +6,7 @@
 
 ## Завантажити
 
-**Поточна версія: 1.0.** **[Остання версія: PhoneInWindowWithSound.exe](https://github.com/drugoj00/phone-in-window-with-sound/releases/latest)** (розділ Assets). [Усі версії](https://github.com/drugoj00/phone-in-window-with-sound/releases).
+**Поточна версія: 1.0.** **[Остання версія: PhoneInWindowWithSound-1.0.exe](https://github.com/drugoj00/phone-in-window-with-sound/releases/latest)** (розділ Assets). [Усі версії](https://github.com/drugoj00/phone-in-window-with-sound/releases).
 
 Інсталятор важить близько 31 МБ: усередині вже є scrcpy зі звуком, інтернет для встановлення не потрібен, права адміністратора не обов’язкові. Контрольну суму SHA-256 файлу вказано в описі кожного релізу. Інсталятор підходить для Windows 10 і 11. Програма працює українською, російською та англійською мовами й обирає мову за мовою Windows.
 
