@@ -90,7 +90,7 @@ button#copy{background:var(--accent);color:var(--accent-ink);border:0;border-rad
       <a class="btn ghost" href="https://github.com/drugoj00/phone-in-window-with-sound" data-i="gh">View on GitHub</a>
       <a class="btn ghost" href="https://t.me/PhoneInWindowSound" data-i="tg">Telegram: news and help</a>
     </div>
-    <p class="small" data-i="dlnote">Current version: 1.0. PhoneInWindowWithSound-1.0.exe, about 31 MB. Free. No internet needed, administrator rights are optional. Windows 10 and 11.</p>
+    <p class="small" data-i="dlnote">Current version: 1.0. PhoneInWindowWithSound-1.0.exe. Free. No internet needed, administrator rights are optional. Windows 10 and 11.</p>
   </div>
 </header>
 
@@ -104,6 +104,7 @@ button#copy{background:var(--accent);color:var(--accent-ink);border:0;border-rad
     <h2 data-i="s_h">How it looks</h2>
     <div class="shots">
       <figure><img id="img_installer" src="installer_en.png" alt="Installer window" width="1280" height="1000"><figcaption data-i="s_c1">The installer: everything is inside, one click to install.</figcaption></figure>
+      <figure><img id="img_launcher" src="launcher_en.png" alt="Launcher window" width="986" height="967"><figcaption data-i="s_c0">The one desktop shortcut opens this window: choose a cable, Wi-Fi, Android 11+ or all phones; the list of phones opens beside the window. The tray icon, language, theme and start with Windows are here too.</figcaption></figure>
       <figure><img id="img_buttons" src="buttons_en.png" alt="Window buttons" width="1664" height="690"><figcaption data-i="s_c2">Four buttons beside every phone window: Copy, Paste, Rotate, Turn off screen. Illustration, not a real phone screen.</figcaption></figure>
       <figure><img id="img_about" src="about_en.png" alt="About window" width="1226" height="963"><figcaption data-i="s_c3">The "i" button opens the About window: links to the Telegram channel, GitHub and this site, and an address for supporting the project.</figcaption></figure>
       <figure><img id="img_tools" src="tools_en.png" alt="Tools menu" width="1280" height="640"><figcaption data-i="s_c4">The gear opens the Tools menu: screenshot, screen recording with sound, phone files, apps, install APK and Wi-Fi in one click.</figcaption></figure>
@@ -198,8 +199,9 @@ var I18N = {
     h1: "Your Android phone in a Windows window, with sound",
     lead: "See the real phone screen on your PC, click with the mouse, type on the keyboard and listen to the phone through the computer. Apps keep running on the phone, so banking apps and messengers behave as usual.",
     dl: "Download for Windows", gh: "View on GitHub", tg: "Telegram: news and help",
-    dlnote: "Current version: 1.0. PhoneInWindowWithSound-1.0.exe, about 31 MB. Free. No internet needed, administrator rights are optional. Windows 10 and 11.",
+    dlnote: "Current version: 1.0. PhoneInWindowWithSound-1.0.exe. Free. No internet needed, administrator rights are optional. Windows 10 and 11.",
     f_h: "What it does", s_h: "How it looks",
+    s_c0: "The one desktop shortcut opens this window: choose a cable, Wi-Fi, Android 11+ or all phones; the list of phones opens beside the window. The tray icon, language, theme (auto, light, dark) and start with Windows are here too.",
     s_c1: "The installer: everything is inside, one click to install.",
     s_c2: "Six buttons for every phone window: Copy, Paste, Rotate, Turn off screen, Tools and About. In portrait they sit in a strip beside the window, in landscape in the title bar. Illustration, not a real phone screen.",
     s_c3: "The \"i\" button opens the About window: links to the Telegram channel, GitHub and this site, and an address for supporting the project.",
@@ -220,7 +222,8 @@ var I18N = {
       ["Six buttons beside the window", "Copy, Paste (text in any language), Rotate, Turn off screen, Tools and About / Support. The window opens in the same orientation as the connected phone."],
       ["Tools menu", "Screenshot, screen recording with sound, phone files, apps, install APK and Wi-Fi in one click. Drag an .apk file onto the window to install the app; any other file goes to the phone's “Download” folder."],
       ["The phone stays awake", "It does not fall asleep or lock while the window is open; the picture and sound don't drop out."],
-      ["Several phones at once", "Each phone gets its own window; one shortcut opens all connected phones."],
+      ["Several phones at once", "Each phone gets its own window; the “All” button of the “Phone in Window” panel opens all connected phones."],
+      ["Tray icon, theme and language", "One shortcut and a tray icon by the clock; click it to hide or show the window; start with Windows in the tray; auto, light or dark theme; English, Ukrainian and Russian."],
       ["Cable or Wi-Fi", "By cable, by Wi-Fi after connecting once with a cable, and by Wi-Fi without a cable on Android 11 and newer."],
       ["Phone report", "The program collects information about the phone (serial numbers and addresses are hidden) and tells you what to turn on."],
       ["English, Ukrainian, Russian", "The installer and the program pick the language from your Windows language. A detailed guide is built in."]
@@ -228,7 +231,7 @@ var I18N = {
     steps: [
       "Run the installer.",
       "On the phone, turn on Developer options once (Settings, About phone, tap \"Build number\" 7 times) and \"USB debugging\".",
-      "Connect the phone with a cable, allow debugging (\"Allow USB debugging?\") and launch the \"Window (cable)\" shortcut."
+      "Connect the phone with a cable, allow debugging (\"Allow USB debugging?\") and open the \"Phone in Window\" shortcut and click \"By cable\"."
     ],
     reqs: [
       "Windows 10 or 11.",
@@ -251,8 +254,9 @@ var I18N = {
     h1: "Твій Android-телефон у вікні Windows, зі звуком",
     lead: "Справжній екран телефона на комп'ютері: клацай мишею, друкуй з клавіатури й слухай звук телефона через комп'ютер. Застосунки працюють на самому телефоні, тому банківські застосунки й месенджери поводяться як зазвичай.",
     dl: "Завантажити для Windows", gh: "Сторінка на GitHub", tg: "Telegram: новини й допомога",
-    dlnote: "Поточна версія: 1.0. PhoneInWindowWithSound-1.0.exe, близько 31 МБ. Безкоштовно. Інтернет і права адміністратора не обов’язкові. Windows 10 і 11.",
+    dlnote: "Поточна версія: 1.0. PhoneInWindowWithSound-1.0.exe. Безкоштовно. Інтернет і права адміністратора не обов’язкові. Windows 10 і 11.",
     f_h: "Що вміє", s_h: "Як це виглядає",
+    s_c0: "Єдиний ярлик на робочому столі відкриває це вікно: кабель, Wi-Fi, Android 11+ або всі телефони; список телефонів розкривається збоку вікна. Тут же значок у треї, мова, тема (авто, світла, темна) і запуск разом з Windows.",
     s_c1: "Інсталятор: усе вже всередині, встановлення одним натисканням.",
     s_c2: "Шість кнопок біля кожного вікна телефона: Копіювати, Вставити, Повернути, Погасити екран, Інструменти і Про програму. У портреті вони в смузі збоку від вікна, в альбомі в заголовку. Ілюстрація, не справжній екран телефона.",
     s_c3: "Кнопка «i» відкриває вікно «Про програму»: посилання на Telegram-канал, GitHub і сайт та адреса для підтримки проєкту.",
@@ -273,7 +277,8 @@ var I18N = {
       ["Шість кнопок біля вікна", "Копіювати, Вставити (текст будь-якою мовою), Повернути, Погасити екран, Інструменти і Про програму / Підтримати. Вікно відкривається в тій самій орієнтації, що й підключений телефон."],
       ["Меню «Інструменти»", "Знімок екрана, запис екрана зі звуком, файли телефона, застосунки, встановлення APK і Wi-Fi одним натисканням. Перетягни файл .apk на вікно: застосунок встановиться; будь-який інший файл потрапить у папку «Download» телефона."],
       ["Телефон не засинає", "Не засинає і не блокується, поки вікно відкрите; картинка і звук не зникають."],
-      ["Кілька телефонів одночасно", "У кожного телефона своє вікно; один ярлик відкриває всі підключені."],
+      ["Кілька телефонів одночасно", "У кожного телефона своє вікно; кнопка «Усі» в панелі «Телефон у вікні» відкриває всі підключені."],
+      ["Значок у треї, тема й мова", "Один ярлик і значок біля годинника; клік ховає або повертає вікно; запуск разом з Windows у треї; тема авто, світла або темна; українська, російська й англійська."],
       ["Кабель або Wi-Fi", "Кабелем, по Wi-Fi після одного підключення кабелем і по Wi-Fi без кабелю на Android 11 і новіших."],
       ["Звіт про телефон", "Програма сама збирає відомості про телефон (серійні номери й адреси приховано) та підказує, що ввімкнути."],
       ["Українською, російською, англійською", "Інсталятор і програма обирають мову за мовою Windows. Докладна інструкція вбудована."]
@@ -281,7 +286,7 @@ var I18N = {
     steps: [
       "Запусти інсталятор.",
       "На телефоні один раз увімкни режим розробника («Для розробників»: Налаштування, Про телефон, 7 разів торкнутися «Номер збірки») і «Налагодження USB».",
-      "Підключи телефон кабелем, дозволь налагодження («Дозволити налагодження USB?») і запусти ярлик «Вікно (кабель)»."
+      "Підключи телефон кабелем, дозволь налагодження («Дозволити налагодження USB?») відкрий ярлик «Телефон у вікні» і натисни «За кабелем»."
     ],
     reqs: [
       "Windows 10 або 11.",
@@ -304,8 +309,9 @@ var I18N = {
     h1: "Твой Android-телефон в окне Windows, со звуком",
     lead: "Настоящий экран телефона на компьютере: щёлкай мышью, печатай с клавиатуры и слушай звук телефона через компьютер. Приложения работают на самом телефоне, поэтому банковские приложения и мессенджеры ведут себя как обычно.",
     dl: "Скачать для Windows", gh: "Страница на GitHub", tg: "Telegram: новости и помощь",
-    dlnote: "Текущая версия: 1.0. PhoneInWindowWithSound-1.0.exe, около 31 МБ. Бесплатно. Интернет и права администратора не обязательны. Windows 10 и 11.",
+    dlnote: "Текущая версия: 1.0. PhoneInWindowWithSound-1.0.exe. Бесплатно. Интернет и права администратора не обязательны. Windows 10 и 11.",
     f_h: "Что умеет", s_h: "Как это выглядит",
+    s_c0: "Единственный ярлык на рабочем столе открывает это окно: кабель, Wi-Fi, Android 11+ или все телефоны; список телефонов раскрывается сбоку окна. Здесь же значок в трее, язык, тема (авто, светлая, тёмная) и запуск вместе с Windows.",
     s_c1: "Установщик: всё уже внутри, установка одним нажатием.",
     s_c2: "Шесть кнопок у каждого окна телефона: Копировать, Вставить, Повернуть, Погасить экран, Инструменты и О программе. В портрете они в полосе сбоку от окна, в альбоме в заголовке. Иллюстрация, не настоящий экран телефона.",
     s_c3: "Кнопка «i» открывает окно «О программе»: ссылки на Telegram-канал, GitHub и сайт и адрес для поддержки проекта.",
@@ -326,7 +332,8 @@ var I18N = {
       ["Шесть кнопок у окна", "Копировать, Вставить (текст на любом языке), Повернуть, Погасить экран, Инструменты и О программе / Поддержать. Окно открывается в той же ориентации, что и подключённый телефон."],
       ["Меню «Инструменты»", "Снимок экрана, запись экрана со звуком, файлы телефона, приложения, установка APK и Wi-Fi одним нажатием. Перетащи файл .apk на окно: приложение установится; любой другой файл попадёт в папку «Download» телефона."],
       ["Телефон не засыпает", "Не засыпает и не блокируется, пока окно открыто; картинка и звук не пропадают."],
-      ["Несколько телефонов одновременно", "У каждого телефона своё окно; один ярлык открывает все подключённые."],
+      ["Несколько телефонов одновременно", "У каждого телефона своё окно; кнопка «Все» в панели «Телефон в окне» открывает все подключённые."],
+      ["Значок в трее, тема и язык", "Один ярлык и значок у часов; щелчок прячет или возвращает окно; запуск вместе с Windows в трее; тема авто, светлая или тёмная; русский, украинский и английский."],
       ["Кабель или Wi-Fi", "По кабелю, по Wi-Fi после одного подключения кабелем и по Wi-Fi без кабеля на Android 11 и новее."],
       ["Отчёт о телефоне", "Программа сама собирает сведения о телефоне (серийные номера и адреса скрыты) и подсказывает, что включить."],
       ["Русский, украинский, английский", "Установщик и программа выбирают язык по языку Windows. Подробная инструкция встроена."]
@@ -334,7 +341,7 @@ var I18N = {
     steps: [
       "Запусти установщик.",
       "На телефоне один раз включи режим разработчика («Для разработчиков»: Настройки, О телефоне, 7 раз нажать «Номер сборки») и «Отладку по USB».",
-      "Подключи телефон кабелем, разреши отладку («Разрешить отладку по USB?») и запусти ярлык «Окно (кабель)»."
+      "Подключи телефон кабелем, разреши отладку («Разрешить отладку по USB?») открой ярлык «Телефон в окне» и нажми «По кабелю»."
     ],
     reqs: [
       "Windows 10 или 11.",
@@ -363,6 +370,7 @@ function setLang(l){
   document.getElementById("steps").innerHTML = d.steps.map(function(s){return '<li>'+esc(s)+'</li>'}).join("");
   document.getElementById("reqs").innerHTML = d.reqs.map(function(s){return '<li>'+esc(s)+'</li>'}).join("");
   document.getElementById("lims").innerHTML = d.lims.map(function(s){return '<li>'+esc(s)+'</li>'}).join("");
+  document.getElementById("img_launcher").src = "launcher_" + l + ".png";
   document.getElementById("img_installer").src = "installer_" + l + ".png";
   document.getElementById("img_buttons").src = "buttons_" + l + ".png";
   document.getElementById("img_about").src = "about_" + l + ".png";
