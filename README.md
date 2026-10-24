@@ -12,7 +12,7 @@ Shows the real screen of an Android phone in a window on a Windows PC. You can c
 
 **Current version: 1.0.** **[Latest version: PhoneInWindowWithSound-1.0.exe](https://github.com/drugoj00/phone-in-window-with-sound/releases/latest)** (Assets section). [All versions](https://github.com/drugoj00/phone-in-window-with-sound/releases).
 
-The installer is about 31 MB: scrcpy with audio is already inside, so you don't need the internet to install, and administrator rights are optional. The SHA-256 checksum of the file is listed in the description of each release. The installer works on Windows 10 and 11. The program is available in English, Ukrainian and Russian and picks the language from your Windows language.
+The installer already contains scrcpy with audio, so you don't need the internet to install, and administrator rights are optional. The SHA-256 checksum of the file is listed in the description of each release. The installer works on Windows 10 and 11. The program is available in English, Ukrainian and Russian and picks the language from your Windows language.
 
 ## Features
 
@@ -21,12 +21,15 @@ The installer is about 31 MB: scrcpy with audio is already inside, so you don't 
 - Six buttons beside the window: Copy, Paste (text in any language), Rotate, Turn off screen (turns off the phone's screen), Tools and About / Support. In a portrait window they sit in a vertical strip to the right of the window (in the colour of its title bar), in landscape in the title bar. The window opens in the same orientation as the connected phone.
 - Tools menu: screenshot, screen recording with sound, phone files (download and send), apps (launch, stop, uninstall), install APK, connect over Wi-Fi in one click (the phone is remembered). You can also drag an .apk file onto the phone window: the app gets installed; any other file goes to the phone's "Download" folder.
 - The phone does not fall asleep or lock while the window is open; the picture and sound don't drop out.
-- Several phones at once: each gets its own window, and the "Windows (all)" shortcut opens all connected phones.
+- Several phones at once: each gets its own window, and the "All" button in the "Phone in Window" panel opens all connected phones.
+- One shortcut and a tray icon: the "Phone in Window" shortcut opens a panel (By cable, Over Wi-Fi, Android 11 and newer, All); each button opens a list of matching phones beside the window. The icon stays in the tray: a click hides or shows the window, closing the window does not remove the icon, and the program can start with Windows in the tray without a window. Language (English, Ukrainian, Russian) and theme (auto, light, dark) are chosen in the panel.
 - Connection by cable, by Wi-Fi after connecting once with a cable, and by Wi-Fi without a cable on Android 11 and newer.
 - Phone report: the program collects information about the phone (serial numbers and addresses are hidden) and tells you what to turn on.
 - A detailed guide and a "Check for updates" option for scrcpy are built into the program.
 
 ## Screenshots
+
+![The launcher window: the connection buttons, language and theme.](https://drugoj00.github.io/phone-in-window-with-sound/launcher_en.png)
 
 ![The six buttons: in a portrait window in a strip beside the window, in landscape in the title bar.](https://drugoj00.github.io/phone-in-window-with-sound/buttons_en.png)
 
@@ -38,7 +41,7 @@ The installer is about 31 MB: scrcpy with audio is already inside, so you don't 
 
 1. Run the installer.
 2. On the phone, turn on Developer options once (Settings, About phone, tap "Build number" 7 times) and "USB debugging".
-3. Connect the phone with a cable, allow debugging ("Allow USB debugging?") and launch the "Window (cable)" shortcut.
+3. Connect the phone with a cable, allow debugging ("Allow USB debugging?") and open the "Phone in Window" shortcut and click "By cable".
 
 ## Requirements
 
