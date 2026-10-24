@@ -2,6 +2,8 @@
 
 🌐 All our programs: https://drugoj00.github.io/
 
+<img src="https://drugoj00.github.io/phone-in-window-with-sound/icon.png" alt="" width="96" align="right">
+
 # Phone in Window with Sound
 
 Shows the real screen of an Android phone in a window on a Windows PC. You can click with the mouse, type on the keyboard and listen to the phone's sound through the computer. Apps keep running on the phone itself; the computer only shows the screen and sends your input, so banking apps, messengers and everything else behave as usual.
