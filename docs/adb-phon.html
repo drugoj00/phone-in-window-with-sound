@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ADB-phon: free ADB manager on your phone, install APK over ADB, air mouse (free)</title>
+<meta name="description" content="Free ADB manager right on your phone: install APKs over ADB, air mouse and remote control, special access that survives a reboot. No computer, no root. Бесплатный ADB-менеджер прямо на телефоне: установка APK по ADB, аэромышь и пульт, особые права, которые переживают перезагрузку. Без компьютера и без root.">
+<link rel="canonical" href="https://drugoj00.github.io/phone-in-window-with-sound/adb-phon.html">
+<meta property="og:title" content="ADB-phon">
+<meta property="og:description" content="Free ADB manager on your phone. Install APK over ADB, air mouse, remote. Free.">
+<meta property="og:image" content="https://drugoj00.github.io/phone-in-window-with-sound/adb_social.png">
+<meta property="og:image:width" content="1280">
+<meta property="og:image:height" content="640">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://drugoj00.github.io/phone-in-window-with-sound/adb_social.png">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://drugoj00.github.io/phone-in-window-with-sound/adb-phon.html">
+<link rel="icon" href="adb_icon.png">
+<style>
+:root{
+  --bg:#f2f7f6; --card:#ffffff; --ink:#0b1f26; --muted:#4a666b; --line:#d6e4e2;
+  --accent:#0f766e; --accent-ink:#ffffff; --hero1:#0b3b3a; --hero2:#0f766e; --hero-ink:#f2f7f6; --warn:#fff6e0; --warn-ink:#5c4300;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#0d1a1e; --card:#13262b; --ink:#e8f1f0; --muted:#9db8b5; --line:#24404a;
+    --accent:#2dd4bf; --accent-ink:#06211f; --hero1:#06201f; --hero2:#0b4a47; --warn:#2a2410; --warn-ink:#f1dfa4;
+  }
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.6 "Segoe UI",system-ui,-apple-system,Roboto,Arial,sans-serif}
+a{color:var(--accent)}
+.wrap{max-width:980px;margin:0 auto;padding:0 16px}
+header.hero{background:linear-gradient(135deg,var(--hero1),var(--hero2));color:var(--hero-ink);padding:20px 0 64px}
+.top{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:12px;font-weight:700;font-size:18px}
+.brand img{width:44px;height:44px;border-radius:10px}
+.langs{display:flex;gap:6px}
+.langs button{background:rgba(255,255,255,.12);color:var(--hero-ink);border:1px solid rgba(255,255,255,.35);border-radius:8px;padding:6px 12px;font:inherit;font-size:15px;cursor:pointer}
+.langs button[aria-pressed="true"]{background:#fff;color:#0b3b3a;border-color:#fff}
+.hero h1{font-size:clamp(30px,6vw,52px);line-height:1.15;margin:44px 0 12px;font-weight:700}
+.hero p.lead{font-size:clamp(18px,2.6vw,22px);max-width:720px;margin:0 0 28px;opacity:.95}
+.btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-block;background:#fff;color:#0b3b3a;text-decoration:none;font-weight:700;padding:14px 26px;border-radius:12px;font-size:18px}
+.btn.ghost{background:transparent;color:var(--hero-ink);border:2px solid rgba(255,255,255,.6)}
+.small{font-size:15px;opacity:.9;margin-top:14px}
+main section{padding:44px 0 0}
+h2{font-size:28px;margin:0 0 16px;line-height:1.25}
+.grid{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 18px}
+.card b{display:block;margin-bottom:4px}
+.shots{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));align-items:start}
+.shots figure{margin:0;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px}
+.shots img{width:100%;height:auto;border-radius:8px;display:block}
+.shots figcaption{font-size:15px;color:var(--muted);margin-top:8px}
+ol.steps{padding-left:22px;margin:0}
+ol.steps li{margin:8px 0}
+ul.plain{padding-left:22px;margin:0}
+ul.plain li{margin:6px 0}
+.note{background:var(--warn);color:var(--warn-ink);border-radius:12px;padding:14px 18px;margin-top:14px;font-size:16px}
+footer{margin-top:56px;padding:28px 0 40px;border-top:1px solid var(--line);color:var(--muted);font-size:15px}
+footer .links{display:flex;gap:18px;flex-wrap:wrap;margin-bottom:10px}
+.donate{display:flex;gap:20px;align-items:center;flex-wrap:wrap}
+.donate img{width:180px;height:180px;border-radius:10px;background:#fff;padding:6px}
+.donate .body{flex:1;min-width:240px}
+code#addr{display:block;word-break:break-all;background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:10px 12px;margin:8px 0;font:15px/1.4 Consolas,monospace}
+button#copy{background:var(--accent);color:var(--accent-ink);border:0;border-radius:10px;padding:10px 18px;font:inherit;font-weight:600;cursor:pointer}
+.donate p{margin:8px 0 0;font-size:15px;color:var(--muted)}
+.btn-card{display:inline-block;background:var(--accent);color:var(--accent-ink);text-decoration:none;font-weight:700;border-radius:10px;padding:10px 18px;margin:8px 0}
+.donate+.donate{margin-top:14px}
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="wrap">
+    <div class="top">
+      <div class="brand"><img src="adb_icon.png" alt="" width="44" height="44"><span data-i="name">ADB-phon</span></div>
+      <div class="langs" role="group" aria-label="Language">
+        <button data-lang="en" aria-pressed="true">English</button>
+        <button data-lang="uk" aria-pressed="false">Українська</button>
+        <button data-lang="ru" aria-pressed="false">Русский</button>
+      </div>
+    </div>
+    <h1 data-i="h1"></h1>
+    <p class="lead" data-i="lead"></p>
+    <div class="btns">
+      <a class="btn" id="dl" href="https://github.com/drugoj00/adb-phon/releases/latest" data-i="dl"></a>
+      <a class="btn ghost" href="https://github.com/drugoj00/adb-phon" data-i="gh"></a>
+      <a class="btn ghost" href="https://drugoj00.github.io/" data-i="back"></a>
+    </div>
+    <p class="small" data-i="dlnote"></p>
+  </div>
+</header>
+<main class="wrap">
+  <section><p data-i="c1"></p></section>
+  <section><h2 data-i="f_h"></h2><div class="grid" id="features"></div></section>
+  <section>
+    <h2 data-i="s_h"></h2>
+    <div class="shots">
+      <figure><img id="img_connect" src="adb_connect_en.png" alt="" width="540" height="975"><figcaption data-i="cap_connect"></figcaption></figure>
+      <figure><img id="img_special" src="adb_special_en.png" alt="" width="540" height="975"><figcaption data-i="cap_special"></figcaption></figure>
+      <figure><img id="img_air" src="adb_air_en.png" alt="" width="540" height="975"><figcaption data-i="cap_air"></figcaption></figure>
+      <figure><img id="img_remote" src="adb_remote_en.png" alt="" width="540" height="975"><figcaption data-i="cap_remote"></figcaption></figure>
+      <figure><img id="img_apps" src="adb_apps_en.png" alt="" width="540" height="975"><figcaption data-i="cap_apps"></figcaption></figure>
+      <figure><img id="img_phone" src="adb_phone_en.png" alt="" width="540" height="975"><figcaption data-i="cap_phone"></figcaption></figure>
+    </div>
+  </section>
+  <section><h2 data-i="st_h"></h2><ol class="steps" id="steps"></ol></section>
+  <section><h2 data-i="lm_h"></h2><ul class="plain" id="lims"></ul><div class="note" data-i="smart"></div></section>
+  <section id="donate">
+    <h2 data-i="d_h"></h2>
+    <p data-i="d_p"></p>
+    <p><a class="btn-card" id="star" href="https://github.com/drugoj00/adb-phon" data-i="star_btn"></a><br><span data-i="star_p"></span></p>
+    <a class="btn-card" href="./#donate" data-i="d_btn"></a>
+  </section>
+</main>
+<footer>
+  <div class="wrap">
+    <div class="links">
+      <a href="https://github.com/drugoj00/adb-phon/releases/latest" data-i="f_rel"></a>
+      <a href="https://github.com/drugoj00/adb-phon/issues" data-i="f_issue"></a>
+      <a href="https://github.com/drugoj00/adb-phon" data-i="f_src"></a>
+      <a href="https://t.me/PhoneInWindowSound">Telegram</a>
+      <a href="contacts.html" data-i="f_contacts"></a>
+      <a href="terms.html" data-i="f_terms"></a>
+      <a href="refund.html" data-i="f_refund"></a>
+      <a href="oferta.html" data-i="f_oferta"></a>
+    </div>
+    <div data-i="note"></div>
+  </div>
+</footer>
+<script>
+var I18N = {"en": {"name": "ADB-phon", "title": "ADB-phon: Free ADB manager right on your phone (free)", "h1": "ADB manager right on your phone", "lead": "Free ADB manager right on your phone: install APKs over ADB, air mouse and remote control, special access that survives a reboot. No computer, no root.", "dl": "Download APK", "gh": "View on GitHub", "back": "All our programs", "dlnote": "Current version: 1.0. ADB-phon-1.0.apk. Free, no ads. Android 8.0 and newer. Interface in English, Ukrainian and Russian.", "f_h": "Features", "s_h": "Screenshots", "st_h": "Quick start", "lm_h": "Limitations and warnings", "d_h": "Support the project", "d_p": "The app is free. If it is useful you can support its development by card, Google Pay or USDT. For USDT use only the TRON network (TRC20): coins sent over another network are lost.", "d_btn": "Donation options", "c1": "ADB-phon connects to the ADB of the same phone (or of another device in your network) and runs commands with shell rights, as if the phone were plugged into a computer.", "feats": [["Install APK over ADB", "Pick a file and the app is installed or updated through ADB, no computer needed."], ["Air mouse and mouse", "The phone’s gyroscope works as a pointer. A real cursor appears on the screen of the controlled device (a helper creates a virtual mouse). Click, scroll, OK, Back, Home, Menu, arrows, volume, sound and microphone on/off."], ["Special access, survives reboot", "Turn on an accessibility service, keep it enabled after a reboot (Android 13–14 often switch it off), remove “restricted settings”, allow writing secure settings, draw over other apps, notifications, usage stats, all files, install unknown apps, no battery limits."], ["Remote control", "Four switchable modes: Keys, Touch, Mouse, Air. Home, Back, Menu, D-pad and OK, volume, media keys, power, recents, text input, touch pad. For phones, TVs and set-top boxes."], ["Easy connection", "Finds devices in the network and shows their names, favourites with your own names, manual IP. Android 11+: pairing by code (wireless debugging). Android 8–10: one command from a computer once. Control another device by IP; press and hold a device to disconnect."], ["Apps", "Icons, search, filters (user, system, disabled, removed), disable and enable, uninstall and restore, stop, clear data, save APK, permission switches, batch actions, protection of critical packages."], ["Files", "Browse folders including Android/data, create, rename, copy, move, delete."], ["Phone", "Device info, monitor, screenshot, screen recording, clear all caches, quick settings (dark mode, Wi-Fi, data, Bluetooth, rotation, font, screen timeout, show touches, animations, DPI), reboot (normal, recovery, bootloader)."], ["Console", "Any shell command."], ["Settings", "Theme (auto, light, dark), language (English, Ukrainian, Russian), keep screen on, bug log, backup and restore of settings to a folder you choose, install any version of the program from GitHub."], ["Free", "No ads, open source."]], "steps": ["Download ADB-phon-1.0.apk and install it (allow installing from this source if Android asks).", "Android 11 and newer: Settings, Developer options, turn on “Wireless debugging”, tap “Pair device with pairing code”. Open ADB-phon in split screen or a floating window, enter the port and the code, tap “Pair”, then “Connect”.", "Android 8–10: once, from a computer with USB debugging, run adb tcpip 5555. In ADB-phon tap “Connect” and allow debugging on the phone.", "For another device (TV, second phone) tap it in the “Devices in the network” list or type its IP."], "lims": ["Actions on system apps can break the phone: be careful, the app asks for confirmation and protects critical packages.", "ADB-phon works locally and sends nothing anywhere. The cursor helper and the remote control manage a whole device: connect only to your own devices.", "The app is not on Google Play (it would not be allowed): download the APK here. Android may warn about installing from an unknown source.", "Tested on two phones (Android 10 and 15). Not yet tested on TVs and set-top boxes, nor on Android 8–9 and 11–14 devices of other makers; reports are welcome.", "Special access settings can differ on Xiaomi, Huawei and other firmwares; on Xiaomi also turn on “USB debugging (security settings)”."], "smart": "The APK is signed but is not on Google Play, so Android may ask you to allow installing from this source. The SHA-256 checksum is in the release description.", "note": "ADB-phon is an independent project, not related to Google. Android is a trademark of Google LLC.", "f_rel": "All versions", "f_issue": "Report a problem", "f_src": "Source on GitHub", "f_contacts": "Contacts", "f_terms": "Terms and conditions", "f_refund": "Refund policy", "f_oferta": "Public offer", "star_btn": "⭐ Star on GitHub", "star_p": "A free way to help: put a star on the GitHub repository. It costs nothing and helps other people find the program.", "cap_connect": "Connection: favourites with names and devices found in the network.", "cap_special": "Special access: accessibility service that stays on after a reboot, restricted settings, secure settings.", "cap_air": "Air mouse: gyroscope pointer, click, arrows, Back, Home, Menu, sound and microphone on/off.", "cap_remote": "Remote control: keys, D-pad, volume, media, text input.", "cap_apps": "Apps with icons, search, filters and “Install APK”.", "cap_phone": "Phone: device info, monitor, screenshot, recording, quick settings."}, "ru": {"name": "ADB-phon", "title": "ADB-phon: Бесплатный ADB-менеджер прямо на телефоне (бесплатно)", "h1": "ADB-менеджер прямо на телефоне", "lead": "Бесплатный ADB-менеджер прямо на телефоне: установка APK по ADB, аэромышь и пульт, особые права, которые переживают перезагрузку. Без компьютера и без root.", "dl": "Скачать APK", "gh": "Смотреть на GitHub", "back": "Все наши программы", "dlnote": "Текущая версия: 1.0. ADB-phon-1.0.apk. Бесплатно, без рекламы. Android 8.0 и новее. Интерфейс на русском, украинском и английском.", "f_h": "Возможности", "s_h": "Скриншоты", "st_h": "Быстрый старт", "lm_h": "Ограничения и предупреждения", "d_h": "Поддержать проект", "d_p": "Программа бесплатная. Если она вам полезна, можно поддержать разработку банковской картой, Google Pay или USDT. Для USDT только сеть TRON (TRC20): монеты, отправленные по другой сети, теряются.", "d_btn": "Способы поддержки", "c1": "ADB-phon подключается к ADB этого же телефона (или другого устройства в сети) и выполняет команды с правами оболочки, как будто телефон подключён к компьютеру.", "feats": [["Установка APK по ADB", "Выберите файл, и приложение установится или обновится через ADB, компьютер не нужен."], ["Аэромышь и мышь", "Гироскоп телефона работает как указка. На экране управляемого устройства появляется настоящий курсор (помощник создаёт виртуальную мышь). Клик, прокрутка, ОК, Назад, Домой, Меню, стрелки, громкость, звук и микрофон вкл/выкл."], ["Особые права, переживают перезагрузку", "Включение службы спецвозможностей, удержание её после перезагрузки (на Android 13–14 она часто выключается сама), снятие «ограниченных настроек», запись защищённых настроек, поверх других окон, уведомления, статистика, все файлы, установка из неизвестных источников, без ограничений батареи."], ["Пульт", "Четыре режима переключателем: Кнопки, Касание, Мышь, Воздух. Домой, назад, меню, крестовина и ОК, громкость, медиа-кнопки, питание, недавние, ввод текста, сенсорная панель. Для телефонов, телевизоров и приставок."], ["Простое подключение", "Автопоиск устройств в сети с именами, избранные с вашими названиями, ручной ввод IP. Android 11+: сопряжение по коду (беспроводная отладка). Android 8–10: один раз команда с компьютера. Управление другим устройством по IP; долгое нажатие на устройство — отключиться."], ["Приложения", "Значки, поиск, фильтры (мои, системные, отключённые, удалённые), отключить и включить, удалить и восстановить, остановить, очистить данные, сохранить APK, разрешения переключателями, пакетные действия, защита критичных пакетов."], ["Файлы", "Обзор папок, в том числе Android/data, создать, переименовать, копировать, переместить, удалить."], ["Телефон", "Сведения об устройстве, мониторинг, снимок и запись экрана, очистка кэша всех приложений, быстрые настройки (тёмная тема, Wi-Fi, данные, Bluetooth, автоповорот, шрифт, гашение экрана, показ касаний, анимации, DPI), перезагрузка (обычная, recovery, загрузчик)."], ["Консоль", "Любые команды оболочки."], ["Настройки", "Тема (авто, светлая, тёмная), язык (русский, украинский, английский), держать экран включённым, журнал для поиска ошибок, резервная копия и восстановление настроек в выбранную папку, установка любой версии программы с GitHub."], ["Бесплатно", "Без рекламы, исходный код открыт."]], "steps": ["Скачайте ADB-phon-1.0.apk и установите его (если Android спросит, разрешите установку из этого источника).", "Android 11 и новее: «Настройки» → «Для разработчиков» → включите «Беспроводная отладка» → «Подключение устройства с помощью кода». Откройте ADB-phon в разделённом экране или плавающем окне, введите порт и код, нажмите «Сопряжение», затем «Подключиться».", "Android 8–10: один раз с компьютера по USB выполните adb tcpip 5555. В ADB-phon нажмите «Подключиться» и разрешите отладку на телефоне.", "Для другого устройства (телевизор, второй телефон) нажмите его в списке «Устройства в сети» или введите IP."], "lims": ["Действия над системными приложениями могут сломать телефон: будьте осторожны, программа просит подтверждение и защищает критичные пакеты.", "ADB-phon работает локально и никуда ничего не отправляет. Помощник с курсором и пульт управляют устройством целиком: подключайтесь только к своим устройствам.", "В Google Play программы нет (такое там не разрешено): скачивайте APK здесь. Android может предупредить об установке из неизвестного источника.", "Проверено на двух телефонах (Android 10 и 15). На телевизорах и приставках, на Android 8–9 и 11–14 других производителей пока не проверялось, отзывы приветствуются.", "Особые права на Xiaomi, Huawei и других прошивках могут отличаться; на Xiaomi включите ещё «Отладка по USB (настройки безопасности)»."], "smart": "APK подписан, но его нет в Google Play, поэтому Android может попросить разрешить установку из этого источника. Контрольная сумма SHA-256 указана в описании релиза.", "note": "ADB-phon: независимый проект, не связан с Google. Android — торговая марка Google LLC.", "f_rel": "Все версии", "f_issue": "Сообщить о проблеме", "f_src": "Код на GitHub", "f_contacts": "Контакты", "f_terms": "Правила и условия", "f_refund": "Правила возврата средств", "f_oferta": "Публичный договор", "star_btn": "⭐ Звезда на GitHub", "star_p": "Бесплатный способ помочь: поставьте звезду репозиторию на GitHub. Это ничего не стоит и помогает другим найти программу.", "cap_connect": "Подключение: избранные с названиями и устройства, найденные в сети.", "cap_special": "Особые права: служба спецвозможностей, которая остаётся после перезагрузки, ограниченные настройки, защищённые настройки.", "cap_air": "Аэромышь: указка гироскопом, клик, стрелки, Назад, Домой, Меню, звук и микрофон вкл/выкл.", "cap_remote": "Пульт: кнопки, крестовина, громкость, медиа, ввод текста.", "cap_apps": "Приложения: значки, поиск, фильтры и «Установить APK».", "cap_phone": "Телефон: сведения, мониторинг, снимок, запись экрана, быстрые настройки."}, "uk": {"name": "ADB-phon", "title": "ADB-phon: Безкоштовний ADB-менеджер прямо на телефоні (безкоштовно)", "h1": "ADB-менеджер прямо на телефоні", "lead": "Безкоштовний ADB-менеджер прямо на телефоні: встановлення APK через ADB, аеромиша й пульт, особливі права, що переживають перезавантаження. Без комп’ютера й без root.", "dl": "Завантажити APK", "gh": "Дивитися на GitHub", "back": "Усі наші програми", "dlnote": "Поточна версія: 1.0. ADB-phon-1.0.apk. Безкоштовно, без реклами. Android 8.0 і новіше. Інтерфейс українською, російською та англійською.", "f_h": "Можливості", "s_h": "Скриншоти", "st_h": "Швидкий старт", "lm_h": "Обмеження та попередження", "d_h": "Підтримати проєкт", "d_p": "Програма безкоштовна. Якщо вона вам корисна, можна підтримати розробку банківською карткою, Google Pay або USDT. Для USDT лише мережа TRON (TRC20): монети, надіслані іншою мережею, втрачаються.", "d_btn": "Способи підтримки", "c1": "ADB-phon підключається до ADB цього ж телефона (або іншого пристрою в мережі) і виконує команди з правами оболонки, наче телефон підключено до комп’ютера.", "feats": [["Встановлення APK через ADB", "Оберіть файл, і застосунок встановиться або оновиться через ADB, комп’ютер не потрібен."], ["Аеромиша та миша", "Гіроскоп телефона працює як указка. На екрані керованого пристрою з’являється справжній курсор (помічник створює віртуальну мишу). Клік, прокручування, ОК, Назад, Додому, Меню, стрілки, гучність, звук і мікрофон увімк/вимк."], ["Особливі права, переживають перезавантаження", "Увімкнення служби спецможливостей, утримання її після перезавантаження (на Android 13–14 вона часто вимикається сама), зняття «обмежених налаштувань», запис захищених налаштувань, поверх інших вікон, сповіщення, статистика, усі файли, встановлення з невідомих джерел, без обмежень батареї."], ["Пульт", "Чотири режими перемикачем: Кнопки, Дотик, Миша, Повітря. Додому, назад, меню, хрестовина й ОК, гучність, медіа-кнопки, живлення, останні, введення тексту, сенсорна панель. Для телефонів, телевізорів і приставок."], ["Просте підключення", "Автопошук пристроїв у мережі з іменами, обрані з вашими назвами, ручне введення IP. Android 11+: сполучення за кодом (бездротове налагодження). Android 8–10: один раз команда з комп’ютера. Керування іншим пристроєм за IP; довге натискання на пристрій — відключитися."], ["Застосунки", "Значки, пошук, фільтри (мої, системні, вимкнені, видалені), вимкнути й увімкнути, видалити й відновити, зупинити, очистити дані, зберегти APK, дозволи перемикачами, пакетні дії, захист критичних пакетів."], ["Файли", "Огляд тек, зокрема Android/data, створити, перейменувати, копіювати, перемістити, видалити."], ["Телефон", "Відомості про пристрій, моніторинг, знімок і запис екрана, очищення кешу всіх застосунків, швидкі налаштування (темна тема, Wi-Fi, дані, Bluetooth, автоповорот, шрифт, згасання екрана, показ дотиків, анімації, DPI), перезавантаження (звичайне, recovery, завантажувач)."], ["Консоль", "Будь-які команди оболонки."], ["Налаштування", "Тема (авто, світла, темна), мова (українська, російська, англійська), тримати екран увімкненим, журнал для пошуку помилок, резервна копія й відновлення налаштувань у вибрану теку, встановлення будь-якої версії програми з GitHub."], ["Безкоштовно", "Без реклами, відкритий код."]], "steps": ["Завантажте ADB-phon-1.0.apk і встановіть його (якщо Android запитає, дозвольте встановлення з цього джерела).", "Android 11 і новіше: «Налаштування» → «Для розробників» → увімкніть «Бездротове налагодження» → «Підключення пристрою за допомогою коду». Відкрийте ADB-phon у розділеному екрані або плаваючому вікні, введіть порт і код, натисніть «Сполучення», потім «Підключитись».", "Android 8–10: один раз з комп’ютера по USB виконайте adb tcpip 5555. В ADB-phon натисніть «Підключитись» і дозвольте налагодження на телефоні.", "Для іншого пристрою (телевізор, другий телефон) натисніть його у списку «Пристрої в мережі» або введіть IP."], "lims": ["Дії над системними застосунками можуть зламати телефон: будьте обережні, програма просить підтвердження й захищає критичні пакети.", "ADB-phon працює локально й нічого нікуди не надсилає. Помічник із курсором і пульт керують пристроєм цілком: підключайтеся лише до своїх пристроїв.", "У Google Play програми немає (такого там не дозволено): завантажуйте APK тут. Android може попередити про встановлення з невідомого джерела.", "Перевірено на двох телефонах (Android 10 і 15). На телевізорах і приставках, на Android 8–9 та 11–14 інших виробників поки не перевірялося, відгуки вітаються.", "Особливі права на Xiaomi, Huawei та інших прошивках можуть відрізнятися; на Xiaomi увімкніть ще «Налагодження по USB (налаштування безпеки)»."], "smart": "APK підписано, але його немає в Google Play, тому Android може попросити дозволити встановлення з цього джерела. Контрольну суму SHA-256 вказано в описі релізу.", "note": "ADB-phon: незалежний проєкт, не пов’язаний з Google. Android — торгова марка Google LLC.", "f_rel": "Усі версії", "f_issue": "Повідомити про проблему", "f_src": "Код на GitHub", "f_contacts": "Контакти", "f_terms": "Правила та умови", "f_refund": "Правила повернення коштів", "f_oferta": "Публічний договір", "star_btn": "⭐ Зірка на GitHub", "star_p": "Безкоштовний спосіб допомогти: поставте зірку репозиторію на GitHub. Це нічого не коштує й допомагає іншим знайти програму.", "cap_connect": "Підключення: обрані з назвами та пристрої, знайдені в мережі.", "cap_special": "Особливі права: служба спецможливостей, що лишається після перезавантаження, обмежені налаштування, захищені налаштування.", "cap_air": "Аеромиша: указка гіроскопом, клік, стрілки, Назад, Додому, Меню, звук і мікрофон увімк/вимк.", "cap_remote": "Пульт: кнопки, хрестовина, гучність, медіа, введення тексту.", "cap_apps": "Застосунки: значки, пошук, фільтри та «Встановити APK».", "cap_phone": "Телефон: відомості, моніторинг, знімок, запис екрана, швидкі налаштування."}};
+function esc(s){return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;")}
+function setLang(l){
+  var d = I18N[l] || I18N.en;
+  document.documentElement.lang = l;
+  document.title = d.title;
+  var nodes = document.querySelectorAll("[data-i]");
+  for (var i = 0; i < nodes.length; i++){ var k = nodes[i].getAttribute("data-i"); if (d[k] != null) nodes[i].textContent = d[k]; }
+  document.getElementById("features").innerHTML = d.feats.map(function(f){return '<div class="card"><b>'+esc(f[0])+'</b>'+esc(f[1])+'</div>'}).join("");
+  document.getElementById("steps").innerHTML = d.steps.map(function(s){return '<li>'+esc(s)+'</li>'}).join("");
+  document.getElementById("lims").innerHTML = d.lims.map(function(s){return '<li>'+esc(s)+'</li>'}).join("");
+  ["connect", "special", "air", "remote", "apps", "phone"].forEach(function(k){ document.getElementById("img_"+k).src = "adb_"+k+"_"+l+".png"; });
+  var b = document.querySelectorAll(".langs button");
+  for (var j = 0; j < b.length; j++) b[j].setAttribute("aria-pressed", b[j].getAttribute("data-lang") === l ? "true" : "false");
+  try { localStorage.setItem("piws-lang", l); } catch (e) {}
+}
+(function () { try { var x = new XMLHttpRequest(); x.open("GET", "https://api.github.com/repos/drugoj00/adb-phon/releases/latest"); x.onload = function () { try { var r = JSON.parse(x.responseText), a = r.assets || []; for (var i = 0; i < a.length; i++) { if (/\.apk$/i.test(a[i].name)) { document.getElementById("dl").href = a[i].browser_download_url; break; } } } catch (e) {} }; x.send(); } catch (e) {} })();
+(function(){
+  var b = document.querySelectorAll(".langs button");
+  for (var i = 0; i < b.length; i++) b[i].addEventListener("click", function(){ setLang(this.getAttribute("data-lang")); });
+  var l = null;
+  try { l = localStorage.getItem("piws-lang"); } catch (e) {}
+  if (!I18N[l]) { var n = (navigator.language || "en").slice(0, 2).toLowerCase(); l = n === "uk" ? "uk" : (n === "ru" || n === "be" ? "ru" : "en"); }
+  setLang(l);
+})();
+</script>
+</body>
+</html>
