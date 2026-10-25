@@ -12,9 +12,15 @@ Shows the real screen of an Android phone in a window on a Windows PC. You can c
 
 ## Download
 
-**Current version: 1.0.** **[Latest version: PhoneInWindowWithSound-1.0.exe](https://github.com/drugoj00/phone-in-window-with-sound/releases/latest)** (Assets section). [All versions](https://github.com/drugoj00/phone-in-window-with-sound/releases).
+**Current version: 1.1.** **[Latest version: PhoneInWindowWithSound-1.1.exe](https://github.com/drugoj00/phone-in-window-with-sound/releases/latest)** (Assets section). [All versions](https://github.com/drugoj00/phone-in-window-with-sound/releases).
 
 The installer already contains scrcpy with audio, so you don't need the internet to install, and administrator rights are optional. The SHA-256 checksum of the file is listed in the description of each release. The installer works on Windows 10 and 11. The program is available in English, Ukrainian and Russian and picks the language from your Windows language.
+
+## What is new in version 1.1
+
+- The Tools menu has a new “ADB tools” submenu: “ADB commands” (a separate button in the icon strip and a menu item; a command box, history, ready-made commands; reboot, recovery, bootloader and power off with confirmation), “Device information” (Android, battery, memory, screen, Wi-Fi address), “Quick settings” (brightness, screen timeout, stay awake while charging, animations, volume, DPI, Wi-Fi and mobile data), “Phone log” (logcat with a filter and saving to a file), “Keys and input” (Back, Home, Recents, volume, typing text, opening a link on the phone).
+- The “Apps” window shows the size and install/update dates of every app, sorts by size and date, can show real app icons (the “Icons” tick, off by default), has a row of “Show” buttons (user, system, disabled, removed, all), selecting several apps with batch removal and batch APK installation (also by dragging onto the window), and can show system apps, disable and re-enable apps (protected system apps cannot be disabled), view and change an app’s permissions, clear its data and save its APK to the computer.
+- Missing Android drivers are installed automatically from the internet (the Microsoft catalog): if the phone is not visible but an Android device without a driver is present, the program downloads and installs the driver by itself (Windows asks for administrator permission once); it can also be started by hand: Tools → ADB tools → Android drivers.
 
 ## Features
 
