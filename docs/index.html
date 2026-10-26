@@ -15,7 +15,7 @@
 <meta property="og:image:width" content="1280">
 <meta property="og:image:height" content="640">
 <meta name="twitter:card" content="summary_large_image">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Phone in Window with Sound","alternateName":["Телефон в окне со звуком","Телефон у вікні зі звуком"],"operatingSystem":"Windows 10, Windows 11","applicationCategory":"UtilitiesApplication","softwareVersion":"1.1","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"downloadUrl":"https://github.com/drugoj00/phone-in-window-with-sound/releases/latest","url":"https://drugoj00.github.io/phone-in-window-with-sound/","image":"https://drugoj00.github.io/phone-in-window-with-sound/social.png?v=11","description":"Android phone screen in a Windows window, with sound, mouse and keyboard. Free, built on scrcpy."}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Phone in Window with Sound","alternateName":["Телефон в окне со звуком","Телефон у вікні зі звуком"],"operatingSystem":"Windows 10, Windows 11","applicationCategory":"UtilitiesApplication","softwareVersion":"1.2","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"downloadUrl":"https://github.com/drugoj00/phone-in-window-with-sound/releases/latest","url":"https://drugoj00.github.io/phone-in-window-with-sound/","image":"https://drugoj00.github.io/phone-in-window-with-sound/social.png?v=11","description":"Android phone screen in a Windows window, with sound, mouse and keyboard. Free, built on scrcpy."}</script>
 <link rel="icon" href="icon.png">
 <style>
 :root{
@@ -90,7 +90,8 @@ button#copy{background:var(--accent);color:var(--accent-ink);border:0;border-rad
       <a class="btn ghost" href="https://github.com/drugoj00/phone-in-window-with-sound" data-i="gh">View on GitHub</a>
       <a class="btn ghost" href="https://t.me/PhoneInWindowSound" data-i="tg">Telegram: news and help</a>
     </div>
-    <p class="small" data-i="dlnote">Current version: 1.1. PhoneInWindowWithSound-1.1.exe. Free. No internet needed, administrator rights are optional. Windows 10 and 11.</p>
+    <p class="small" data-i="dlnote">Current version: 1.2. PhoneInWindowWithSound-1.2.exe. Free. No internet needed, administrator rights are optional. Windows 10 and 11.</p>
+    <p class="small" data-i="newnote">New in 1.2: a serious phone-rotation bug is fixed. The program now checks that the phone’s rotation settings are really restored after use and removes a leftover “ignore app orientation” mode.</p>
   </div>
 </header>
 
@@ -135,22 +136,6 @@ button#copy{background:var(--accent);color:var(--accent-ink);border:0;border-rad
         <b data-i="mp_t">Smart Life for Windows</b><br>
         <span data-i="mp_d">Control Smart Life (Tuya) sockets from a Windows window: QR sign-in, timers, scenes, schedules. Free.</span><br>
         <a class="btn-card" href="smart-life.html" data-i="mp_b">Open the page</a>
-      </div>
-    </div>
-    <div class="card moreprog">
-      <img src="adb_icon.png" alt="" width="84" height="84">
-      <div class="body">
-        <b data-i="mp2_t">ADB-phon (Android)</b><br>
-        <span data-i="mp2_d">Free ADB manager on your phone: install APK over ADB, air mouse, remote, special access. No computer.</span><br>
-        <a class="btn-card" href="adb-phon.html" data-i="mp2_b">Open the page</a>
-      </div>
-    </div>
-    <div class="card moreprog">
-      <img src="app_menu_icon.png" alt="" width="84" height="84">
-      <div class="body">
-        <b data-i="mp3_t">App Menu (Android)</b><br>
-        <span data-i="mp3_d">Full-screen app menu for TV boxes, car head units and phones: remote, touch, mouse, folders, any app version. Free.</span><br>
-        <a class="btn-card" href="app-menu.html" data-i="mp3_b">Open the page</a>
       </div>
     </div>
   </section>
@@ -210,12 +195,13 @@ var I18N = {
   en: {
     f_all: "All programs",
     star_btn: "⭐ Star on GitHub", star_p: "A free way to help: put a star on the GitHub repository. It costs nothing and helps other people find the program.",
-    mp_h: "More programs", mp_t: "Smart Life for Windows", mp_d: "Control Smart Life (Tuya) sockets from a Windows window: QR sign-in, timers, scenes, schedules. Free.", mp_b: "Open the page", mp2_t: "ADB-phon (Android)", mp2_d: "Free ADB manager on your phone: install APK over ADB, air mouse, remote, special access. No computer.", mp2_b: "Open the page", mp3_t: "App Menu (Android)", mp3_d: "Full-screen app menu for TV boxes, car head units and phones: remote, touch, mouse, folders, any app version. Free.", mp3_b: "Open the page",
+    mp_h: "More programs", mp_t: "Smart Life for Windows", mp_d: "Control Smart Life (Tuya) sockets from a Windows window: QR sign-in, timers, scenes, schedules. Free.", mp_b: "Open the page",
     name: "Phone in Window with Sound",
     h1: "Your Android phone in a Windows window, with sound",
     lead: "See the real phone screen on your PC, click with the mouse, type on the keyboard and listen to the phone through the computer. Apps keep running on the phone, so banking apps and messengers behave as usual.",
     dl: "Download for Windows", gh: "View on GitHub", tg: "Telegram: news and help",
-    dlnote: "Current version: 1.1. PhoneInWindowWithSound-1.1.exe. Free. No internet needed, administrator rights are optional. Windows 10 and 11.",
+    dlnote: "Current version: 1.2. PhoneInWindowWithSound-1.2.exe. Free. No internet needed, administrator rights are optional. Windows 10 and 11.",
+    newnote: "New in 1.2: a serious phone-rotation bug is fixed. The program now checks that the phone’s rotation settings are really restored after use and removes a leftover “ignore app orientation” mode.",
     f_h: "What it does", s_h: "How it looks",
     s_c0: "The one desktop shortcut opens this window: choose a cable, Wi-Fi, Android 11+ or all phones; the list of phones opens beside the window. The tray icon, language, theme (auto, light, dark) and start with Windows are here too.",
     s_c1: "The installer: everything is inside, one click to install.",
@@ -266,12 +252,13 @@ var I18N = {
   uk: {
     f_all: "Усі програми",
     star_btn: "⭐ Зірка на GitHub", star_p: "Безкоштовний спосіб допомогти: поставте зірку репозиторію на GitHub. Це нічого не коштує й допомагає іншим знайти програму.",
-    mp_h: "Інші програми", mp_t: "Smart Life для Windows", mp_d: "Керуйте розетками Smart Life (Tuya) з вікна Windows: вхід за QR, таймери, сценарії, розклади. Безкоштовно.", mp_b: "Відкрити сторінку", mp2_t: "ADB-phon (Android)", mp2_d: "Безкоштовний ADB-менеджер на телефоні: встановлення APK через ADB, аеромиша, пульт, особливі права. Без комп’ютера.", mp2_b: "Відкрити сторінку", mp3_t: "Меню застосунків (Android)", mp3_d: "Повноекранне меню застосунків для приставок, автомагнітол і телефонів: пульт, дотик, миша, теки, будь-яка версія застосунку. Безкоштовно.", mp3_b: "Відкрити сторінку",
+    mp_h: "Інші програми", mp_t: "Smart Life для Windows", mp_d: "Керуйте розетками Smart Life (Tuya) з вікна Windows: вхід за QR, таймери, сценарії, розклади. Безкоштовно.", mp_b: "Відкрити сторінку",
     name: "Телефон у вікні зі звуком",
     h1: "Твій Android-телефон у вікні Windows, зі звуком",
     lead: "Справжній екран телефона на комп'ютері: клацай мишею, друкуй з клавіатури й слухай звук телефона через комп'ютер. Застосунки працюють на самому телефоні, тому банківські застосунки й месенджери поводяться як зазвичай.",
     dl: "Завантажити для Windows", gh: "Сторінка на GitHub", tg: "Telegram: новини й допомога",
-    dlnote: "Поточна версія: 1.1. PhoneInWindowWithSound-1.1.exe. Безкоштовно. Інтернет і права адміністратора не обов’язкові. Windows 10 і 11.",
+    dlnote: "Поточна версія: 1.2. PhoneInWindowWithSound-1.2.exe. Безкоштовно. Інтернет і права адміністратора не обов’язкові. Windows 10 і 11.",
+    newnote: "Нове в 1.2: виправлено серйозну помилку з поворотом екрана телефона. Програма тепер перевіряє, що налаштування повороту після роботи справді повернулися, і знімає залишок режиму «ігнорувати орієнтацію застосунків».",
     f_h: "Що вміє", s_h: "Як це виглядає",
     s_c0: "Єдиний ярлик на робочому столі відкриває це вікно: кабель, Wi-Fi, Android 11+ або всі телефони; список телефонів розкривається збоку вікна. Тут же значок у треї, мова, тема (авто, світла, темна) і запуск разом з Windows.",
     s_c1: "Інсталятор: усе вже всередині, встановлення одним натисканням.",
@@ -322,12 +309,13 @@ var I18N = {
   ru: {
     f_all: "Все программы",
     star_btn: "⭐ Звезда на GitHub", star_p: "Бесплатный способ помочь: поставьте звезду репозиторию на GitHub. Это ничего не стоит и помогает другим найти программу.",
-    mp_h: "Другие программы", mp_t: "Smart Life для Windows", mp_d: "Управляйте розетками Smart Life (Tuya) из окна Windows: вход по QR, таймеры, сценарии, расписания. Бесплатно.", mp_b: "Открыть страницу", mp2_t: "ADB-phon (Android)", mp2_d: "Бесплатный ADB-менеджер на телефоне: установка APK по ADB, аэромышь, пульт, особые права. Без компьютера.", mp2_b: "Открыть страницу", mp3_t: "Меню приложений (Android)", mp3_d: "Полноэкранное меню приложений для приставок, автомагнитол и телефонов: пульт, касание, мышь, папки, любая версия приложения. Бесплатно.", mp3_b: "Открыть страницу",
+    mp_h: "Другие программы", mp_t: "Smart Life для Windows", mp_d: "Управляйте розетками Smart Life (Tuya) из окна Windows: вход по QR, таймеры, сценарии, расписания. Бесплатно.", mp_b: "Открыть страницу",
     name: "Телефон в окне со звуком",
     h1: "Твой Android-телефон в окне Windows, со звуком",
     lead: "Настоящий экран телефона на компьютере: щёлкай мышью, печатай с клавиатуры и слушай звук телефона через компьютер. Приложения работают на самом телефоне, поэтому банковские приложения и мессенджеры ведут себя как обычно.",
     dl: "Скачать для Windows", gh: "Страница на GitHub", tg: "Telegram: новости и помощь",
-    dlnote: "Текущая версия: 1.1. PhoneInWindowWithSound-1.1.exe. Бесплатно. Интернет и права администратора не обязательны. Windows 10 и 11.",
+    dlnote: "Текущая версия: 1.2. PhoneInWindowWithSound-1.2.exe. Бесплатно. Интернет и права администратора не обязательны. Windows 10 и 11.",
+    newnote: "Новое в 1.2: исправлена серьёзная ошибка с поворотом экрана телефона. Программа теперь проверяет, что настройки поворота после работы действительно вернулись, и снимает остаток режима «игнорировать ориентацию приложений».",
     f_h: "Что умеет", s_h: "Как это выглядит",
     s_c0: "Единственный ярлык на рабочем столе открывает это окно: кабель, Wi-Fi, Android 11+ или все телефоны; список телефонов раскрывается сбоку окна. Здесь же значок в трее, язык, тема (авто, светлая, тёмная) и запуск вместе с Windows.",
     s_c1: "Установщик: всё уже внутри, установка одним нажатием.",
