@@ -12,9 +12,14 @@ Shows the real screen of an Android phone in a window on a Windows PC. You can c
 
 ## Download
 
-**Current version: 1.1.** **[Latest version: PhoneInWindowWithSound-1.1.exe](https://github.com/drugoj00/phone-in-window-with-sound/releases/latest)** (Assets section). [All versions](https://github.com/drugoj00/phone-in-window-with-sound/releases).
+**Current version: 1.2.** **[Latest version: PhoneInWindowWithSound-1.2.exe](https://github.com/drugoj00/phone-in-window-with-sound/releases/latest)** (Assets section). [All versions](https://github.com/drugoj00/phone-in-window-with-sound/releases).
 
 The installer already contains scrcpy with audio, so you don't need the internet to install, and administrator rights are optional. The SHA-256 checksum of the file is listed in the description of each release. The installer works on Windows 10 and 11. The program is available in English, Ukrainian and Russian and picks the language from your Windows language.
+
+## What is new in version 1.2
+
+- A serious phone-rotation bug is fixed. On some phones (seen on the Samsung Galaxy A14) the “ignore app orientation” mode, a locked rotation and a switched-off auto-rotate could stay behind after the window was used: the screen “glitched” or lay in landscape even though the window was already closed. Now the return of the previous settings is verified: the program reads them back from the phone and repeats the return (3 attempts, then up to 10 more minutes if the phone is busy or unreachable), and the safety record is kept until the return is confirmed. A leftover “ignore app orientation” mode without our record is removed automatically when the program starts, when a window opens and after it closes; when the program exits it makes a last attempt to restore the settings.
+- If a phone already has such a glitch: connect it and start the program, the “ignore app orientation” mode will be removed by itself. If auto-rotate is off, switch it on in the phone's quick settings.
 
 ## What is new in version 1.1
 
