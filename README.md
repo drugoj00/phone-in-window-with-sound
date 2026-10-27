@@ -12,9 +12,21 @@ Shows the real screen of an Android phone in a window on a Windows PC. You can c
 
 ## Download
 
-**Current version: 1.2.** **[Latest version: PhoneInWindowWithSound-1.2.exe](https://github.com/drugoj00/phone-in-window-with-sound/releases/latest)** (Assets section). [All versions](https://github.com/drugoj00/phone-in-window-with-sound/releases).
+**Current version: 1.3.** **[Latest version: PhoneInWindowWithSound-1.3.exe](https://github.com/drugoj00/phone-in-window-with-sound/releases/latest)** (Assets section). [All versions](https://github.com/drugoj00/phone-in-window-with-sound/releases).
 
 The installer already contains scrcpy with audio, so you don't need the internet to install, and administrator rights are optional. The SHA-256 checksum of the file is listed in the description of each release. The installer works on Windows 10 and 11. The program is available in English, Ukrainian and Russian and picks the language from your Windows language.
+
+## What is new in version 1.3
+
+- Installing apps from many formats: APK, APKS, APKM, XAPK and ZIP with APK and OBB. The Tools menu has a new “Install app…” item (several files can be chosen at once). The parts of a package are chosen for your phone (processor, screen density, system language), OBB files are copied to Android/obb, and the app is installed without a copy in “Dual app”.
+- A package file (APKS, APKM, XAPK, ZIP) dropped onto the phone window is now installed by the program itself: before, such a file was only copied to the phone’s Downloads folder.
+- A “Start Shizuku from the PC” button in “Quick settings” (Shizuku must be installed on the phone and opened once; after a phone reboot start it again).
+- A tray-icon menu item “Skip in “All phones” mode”: the phones that are ticked are skipped by the “All phones” mode.
+- The “About” window has a line “All our programs” with a link to https://drugoj00.github.io/ .
+- A switch “Keep the screen on while the window is open” in Tools (on by default).
+- Fixed: on Samsung phones, installing an APK (with the button or by dropping the file onto the window) also put the app into “Dual app”, and a second icon appeared in the menu. Now the app is installed only for the current user.
+- Fixed: the phone’s screen timeout is no longer overwritten: if it was changed while the window was open, it is not put back to the old value when the window closes.
+- Fixed: screen rotation. The program no longer removes someone else’s “ignore app orientation” mode (only its own) and does not touch the rotation unless it was turned with the button in the window.
 
 ## What is new in version 1.2
 
