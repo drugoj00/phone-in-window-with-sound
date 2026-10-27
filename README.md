@@ -18,15 +18,14 @@ The installer already contains scrcpy with audio, so you don't need the internet
 
 ## What is new in version 1.3
 
-- Installing apps from many formats: APK, APKS, APKM, XAPK and ZIP with APK and OBB. The Tools menu has a new “Install app…” item (several files can be chosen at once). The parts of a package are chosen for your phone (processor, screen density, system language), OBB files are copied to Android/obb, and the app is installed without a copy in “Dual app”.
-- A package file (APKS, APKM, XAPK, ZIP) dropped onto the phone window is now installed by the program itself: before, such a file was only copied to the phone’s Downloads folder.
-- A “Start Shizuku from the PC” button in “Quick settings” (Shizuku must be installed on the phone and opened once; after a phone reboot start it again).
-- A tray-icon menu item “Skip in “All phones” mode”: the phones that are ticked are skipped by the “All phones” mode.
-- The “About” window has a line “All our programs” with a link to https://drugoj00.github.io/ .
-- A switch “Keep the screen on while the window is open” in Tools (on by default).
-- Fixed: on Samsung phones, installing an APK (with the button or by dropping the file onto the window) also put the app into “Dual app”, and a second icon appeared in the menu. Now the app is installed only for the current user.
-- Fixed: the phone’s screen timeout is no longer overwritten: if it was changed while the window was open, it is not put back to the old value when the window closes.
-- Fixed: screen rotation. The program no longer removes someone else’s “ignore app orientation” mode (only its own) and does not touch the rotation unless it was turned with the button in the window.
+- Install APK, APKS, APKM, XAPK, ZIP with OBB: “Install app…” and drag-and-drop onto the window.
+- “Start Shizuku from the PC” button.
+- Tray: “Skip in “All phones” mode”.
+- “About”: “All our programs” link.
+- “Keep the screen on while the window is open” switch.
+- Fixed: second icon on Samsung (“Dual app”) when installing an APK.
+- Fixed: screen timeout is no longer overwritten when the window closes.
+- Fixed: rotation: a leftover “ignore app orientation” is removed only if the program itself enabled it.
 
 ## What is new in version 1.2
 
