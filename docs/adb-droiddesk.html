@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ADB DroidDesk: Android and Android TV from Windows, install any app (free)</title>
+<meta name="description" content="Android and Android TV from Windows: install any app (APK, APKS, APKM, XAPK, OBB), adapt apps for TV, long screenshots, video. Free. Android и Android TV из Windows: установка любых приложений. Android і Android TV з Windows: встановлення будь-яких застосунків.">
+<link rel="canonical" href="https://drugoj00.github.io/phone-in-window-with-sound/adb-droiddesk.html">
+<meta property="og:title" content="ADB DroidDesk">
+<meta property="og:description" content="Android and Android TV from Windows: install any app, adapt apps for TV, long screenshots. Free.">
+<meta property="og:image" content="https://drugoj00.github.io/phone-in-window-with-sound/dd_social.png">
+<meta property="og:image:width" content="1280">
+<meta property="og:image:height" content="640">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://drugoj00.github.io/phone-in-window-with-sound/dd_social.png">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://drugoj00.github.io/phone-in-window-with-sound/adb-droiddesk.html">
+<link rel="icon" href="dd_icon.png">
+<style>
+:root{
+  --bg:#f2f7f6; --card:#ffffff; --ink:#0b1f26; --muted:#4a666b; --line:#d6e4e2;
+  --accent:#0f766e; --accent-ink:#ffffff; --hero1:#0b3b3a; --hero2:#0f766e; --hero-ink:#f2f7f6; --warn:#fff6e0; --warn-ink:#5c4300;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#0d1a1e; --card:#13262b; --ink:#e8f1f0; --muted:#9db8b5; --line:#24404a;
+    --accent:#2dd4bf; --accent-ink:#06211f; --hero1:#06201f; --hero2:#0b4a47; --warn:#2a2410; --warn-ink:#f1dfa4;
+  }
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.6 "Segoe UI",system-ui,-apple-system,Roboto,Arial,sans-serif}
+a{color:var(--accent)}
+.wrap{max-width:980px;margin:0 auto;padding:0 16px}
+header.hero{background:linear-gradient(135deg,var(--hero1),var(--hero2));color:var(--hero-ink);padding:20px 0 64px}
+.top{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:12px;font-weight:700;font-size:18px}
+.brand img{width:44px;height:44px;border-radius:10px}
+.langs{display:flex;gap:6px}
+.langs button{background:rgba(255,255,255,.12);color:var(--hero-ink);border:1px solid rgba(255,255,255,.35);border-radius:8px;padding:6px 12px;font:inherit;font-size:15px;cursor:pointer}
+.langs button[aria-pressed="true"]{background:#fff;color:#0b3b3a;border-color:#fff}
+.hero h1{font-size:clamp(30px,6vw,52px);line-height:1.15;margin:44px 0 12px;font-weight:700}
+.hero p.lead{font-size:clamp(18px,2.6vw,22px);max-width:720px;margin:0 0 28px;opacity:.95}
+.btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-block;background:#fff;color:#0b3b3a;text-decoration:none;font-weight:700;padding:14px 26px;border-radius:12px;font-size:18px}
+.btn.ghost{background:transparent;color:var(--hero-ink);border:2px solid rgba(255,255,255,.6)}
+.small{font-size:15px;opacity:.9;margin-top:14px}
+main section{padding:44px 0 0}
+h2{font-size:28px;margin:0 0 16px;line-height:1.25}
+.grid{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 18px}
+.card b{display:block;margin-bottom:4px}
+.shots{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));align-items:start}
+.shots figure{margin:0;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px}
+.shots img{width:100%;height:auto;border-radius:8px;display:block}
+.shots figcaption{font-size:15px;color:var(--muted);margin-top:8px}
+ol.steps{padding-left:22px;margin:0}
+ol.steps li{margin:8px 0}
+ul.plain{padding-left:22px;margin:0}
+ul.plain li{margin:6px 0}
+.note{background:var(--warn);color:var(--warn-ink);border-radius:12px;padding:14px 18px;margin-top:14px;font-size:16px}
+footer{margin-top:56px;padding:28px 0 40px;border-top:1px solid var(--line);color:var(--muted);font-size:15px}
+footer .links{display:flex;gap:18px;flex-wrap:wrap;margin-bottom:10px}
+.donate{display:flex;gap:20px;align-items:center;flex-wrap:wrap}
+.donate img{width:180px;height:180px;border-radius:10px;background:#fff;padding:6px}
+.donate .body{flex:1;min-width:240px}
+code#addr{display:block;word-break:break-all;background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:10px 12px;margin:8px 0;font:15px/1.4 Consolas,monospace}
+button#copy{background:var(--accent);color:var(--accent-ink);border:0;border-radius:10px;padding:10px 18px;font:inherit;font-weight:600;cursor:pointer}
+.donate p{margin:8px 0 0;font-size:15px;color:var(--muted)}
+.btn-card{display:inline-block;background:var(--accent);color:var(--accent-ink);text-decoration:none;font-weight:700;border-radius:10px;padding:10px 18px;margin:8px 0}
+.donate+.donate{margin-top:14px}
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="wrap">
+    <div class="top">
+      <div class="brand"><img src="dd_icon.png" alt="" width="44" height="44"><span data-i="name">ADB DroidDesk</span></div>
+      <div class="langs" role="group" aria-label="Language">
+        <button data-lang="en" aria-pressed="true">English</button>
+        <button data-lang="uk" aria-pressed="false">Українська</button>
+        <button data-lang="ru" aria-pressed="false">Русский</button>
+      </div>
+    </div>
+    <h1 data-i="h1"></h1>
+    <p class="lead" data-i="lead"></p>
+    <div class="btns">
+      <a class="btn" id="dl" href="https://github.com/drugoj00/adb-droiddesk/releases/latest" data-i="dl"></a>
+      <a class="btn ghost" href="https://github.com/drugoj00/adb-droiddesk" data-i="gh"></a>
+      <a class="btn ghost" href="https://drugoj00.github.io/" data-i="back"></a>
+    </div>
+    <p class="small" data-i="dlnote"></p>
+  </div>
+</header>
+<main class="wrap">
+  <section><p data-i="c1"></p></section>
+  <section><h2 data-i="f_h"></h2><div class="grid" id="features"></div></section>
+  <section>
+    <h2 data-i="s_h"></h2>
+    <div class="shots">
+      <figure><img id="img_install" src="dd_install_en.png" alt="" width="1000" height="700"></figure>
+      <figure><img id="img_adapt" src="dd_adapt_en.png" alt="" width="1000" height="700"></figure>
+      <figure><img id="img_scissors" src="dd_scissors_en.png" alt="" width="1000" height="700"></figure>
+      <figure><img id="img_apps" src="dd_apps_en.png" alt="" width="1000" height="700"></figure>
+    </div>
+  </section>
+  <section><h2 data-i="st_h"></h2><ol class="steps" id="steps"></ol></section>
+  <section><h2 data-i="lm_h"></h2><ul class="plain" id="lims"></ul><div class="note" data-i="smart"></div></section>
+  <section id="donate">
+    <h2 data-i="d_h"></h2>
+    <p data-i="d_p"></p>
+    <p><a class="btn-card" id="star" href="https://github.com/drugoj00/adb-droiddesk" data-i="star_btn"></a><br><span data-i="star_p"></span></p>
+    <a class="btn-card" href="./#donate" data-i="d_btn"></a>
+  </section>
+</main>
+<footer>
+  <div class="wrap">
+    <div class="links">
+      <a href="https://github.com/drugoj00/adb-droiddesk/releases/latest" data-i="f_rel"></a>
+      <a href="https://github.com/drugoj00/adb-droiddesk/issues" data-i="f_issue"></a>
+      <a href="https://github.com/drugoj00/adb-droiddesk" data-i="f_src"></a>
+      <a href="https://t.me/PhoneInWindowSound">Telegram</a>
+      <a href="contacts.html" data-i="f_contacts"></a>
+      <a href="terms.html" data-i="f_terms"></a>
+      <a href="refund.html" data-i="f_refund"></a>
+      <a href="oferta.html" data-i="f_oferta"></a>
+    </div>
+    <div data-i="note"></div>
+  </div>
+</footer>
+<script>
+var I18N = {"en": {"name": "ADB DroidDesk", "title": "ADB DroidDesk: Android and Android TV from Windows, install any app (free)", "h1": "Android and Android TV from your Windows PC", "lead": "Install any app on a TV box without a file manager, adapt apps for TV, make launcher banners, take long scrolling screenshots and record video. Free.", "dl": "Download for Windows", "gh": "View on GitHub", "back": "All programs", "dlnote": "Current version: 1.0. ADBDroidDesk-1.0.exe. Free. Windows 10 and 11. Interface in English, Ukrainian and Russian.", "f_h": "What it does", "s_h": "How it looks", "st_h": "Getting started", "lm_h": "Limitations", "d_h": "Support the project", "d_p": "The program is free. If it is useful to you, you can support its development by card, Google Pay or USDT: the same donation page as for the other program on this site.", "d_btn": "Donation options", "c1": "A free Windows program for phones, tablets and Android TV boxes over USB and Wi-Fi. The focus is Android TV: put anything on a box without a file manager, switch on accessibility services where the system blocks them, adapt a phone app for TV, make a banner. Plus Scissors: regular and long scrolling screenshots with its own editor. The rest is in one window: screen with sound, apps, files, adb console, cleaner, backups. adb and scrcpy are inside, nothing else to install.", "feats": [["Android TV", "Install on a box without a file manager: APK, APKS, APKM, XAPK, ZIP with game data (OBB)."], ["Android TV", "Sources: files, a folder, drag and drop, F-Droid with all old versions, a link to a file."], ["Android TV", "The right package parts are chosen for the device CPU, screen density and language."], ["Android TV", "Install an older version over a newer one; where Android 12+ refuses, a replace with a backup and rollback (data is deleted)."], ["Android TV", "Old apps on Android 14: bypass of the “target SDK too old” block."], ["Android TV", "Accessibility: enable a service and “restricted settings” with adb commands (Android 13–14)."], ["Android TV", "Adapt for TV: Android TV launcher entry, no touchscreen requirement, 64-bit libraries from another build, signing."], ["Android TV", "Banners 320×180, 640×360, 1280×720; icon and cover images from Google Play."], ["Android TV", "Remote: arrows, OK, Back, Home, volume, text input; to several devices at once."], ["Scissors", "Screenshot of an area, a window, the whole screen and long ones: scrolling down and right."], ["Scissors", "Timer up to 10 s to open a menu; PNG, JPG, WEBP, BMP, PDF."], ["Scissors", "Built-in editor: drawing, arrows, text, blur; copy to the clipboard."], ["Scissors", "Starts from its own shortcut, without the main window."], ["Everything else", "Device screen in a tab: sound (Android 10 too), video recording, screenshot, rotation, a mini window in the screen corner."], ["Everything else", "Apps: names and icons, uninstall and disable system apps with an APK copy, permissions, batch actions."], ["Everything else", "Files: internal storage and card, drag and drop both ways."], ["Everything else", "adb console with highlighting and history, logcat with filters."], ["Everything else", "Cleaner with a database of known bloatware and rollback; app backups."], ["Everything else", "Device overview like CPU-Z: CPU, memory, battery, display, cameras, sensors."], ["Everything else", "Several devices at once, USB and Wi-Fi, pairing by code; tray icon; Russian, Ukrainian, English; light and dark theme."]], "steps": ["Download ADBDroidDesk-1.0.exe and run it; Windows asks for permission (if declined, the program goes into your user folder).", "On the device: Developer options → USB debugging (a box: network debugging); connect the cable and allow debugging.", "A box over Wi-Fi: “+ Wi-Fi” → IP and port, usually 5555.", "Android TV → Install: drop app files into the window and press Install."], "lims": ["Any version can be downloaded from F-Droid; Google Play is used only for banner images, not for downloading apps.", "A downgrade on Android 12+ and a signature change are possible only by deleting the app data: the system allows nothing else.", "Adapting for TV changes the app signature: store updates will not apply to the copy; split apps are not supported yet; remote control cannot be added to an app.", "Tested on Android 10 and 15 phones; accessibility services have not been tested on a real Android TV 14 box yet.", "Android 10 sound goes through sndcpy; Android 11+ sends sound by itself.", "The program is unofficial; adb (Google) and scrcpy (Genymobile) are inside, Apache-2.0."], "smart": "The installer is not signed with a publisher certificate: Windows may show a SmartScreen warning (“More info” → “Run anyway”).", "note": "ADB DroidDesk is an independent project. adb is by Google, scrcpy by Genymobile, both Apache-2.0. Android and Google Play are trademarks of Google.", "f_rel": "All versions", "f_issue": "Report a problem", "f_src": "Source on GitHub", "f_contacts": "Contacts", "f_terms": "Terms and conditions", "f_refund": "Refund policy", "f_oferta": "Public offer", "star_btn": "⭐ Star on GitHub", "star_p": "A free way to help: put a star on the GitHub repository. It costs nothing and helps other people find the program."}, "uk": {"name": "ADB DroidDesk", "title": "ADB DroidDesk: Android і Android TV з Windows, встановлення будь-яких застосунків (безкоштовно)", "h1": "Android і Android TV з вашого комп’ютера на Windows", "lead": "Встановлюйте будь-які застосунки на приставку без файлового менеджера, підлаштовуйте їх під ТВ, робіть банери, довгі скриншоти з прокруткою та записуйте відео. Безкоштовно.", "dl": "Завантажити для Windows", "gh": "Дивитися на GitHub", "back": "Усі програми", "dlnote": "Поточна версія: 1.0. ADBDroidDesk-1.0.exe. Безкоштовно. Windows 10 і 11. Інтерфейс англійською, українською та російською.", "f_h": "Що вміє", "s_h": "Як виглядає", "st_h": "Швидкий старт", "lm_h": "Обмеження", "d_h": "Підтримати проєкт", "d_p": "Програма безкоштовна. Якщо вона вам корисна, можна підтримати розробку карткою, Google Pay або USDT: це та сама сторінка внесків, що й для іншої програми на цьому сайті.", "d_btn": "Способи підтримки", "c1": "Безкоштовна програма для Windows для телефонів, планшетів і приставок Android TV по USB та Wi-Fi. Упор на Android TV: поставити на приставку будь-що без файлового менеджера, увімкнути служби спеціальних можливостей там, де їх блокує система, підлаштувати телефонний застосунок під ТВ, зробити банер. Окремо «Ножиці»: звичайний і довгий скриншот із прокруткою та власний редактор. Решта — в одному вікні: екран зі звуком, застосунки, файли, консоль adb, очищення, копії. adb і scrcpy всередині, нічого окремо ставити не треба.", "feats": [["Android TV", "Встановлення на приставку без файлового менеджера: APK, APKS, APKM, XAPK, ZIP з даними гри (OBB)."], ["Android TV", "Джерела: файли, тека, перетягування, F-Droid з усіма старими версіями, посилання на файл."], ["Android TV", "Потрібні частини пакета добираються під процесор, щільність екрана та мову пристрою."], ["Android TV", "Встановлення старішої версії поверх новішої; де Android 12+ не дозволяє, заміна з копією та відкатом (дані видаляються)."], ["Android TV", "Старі застосунки на Android 14: обхід блокування «надто старий SDK»."], ["Android TV", "Спеціальні можливості: увімкнути службу та «обмежені налаштування» командами adb (Android 13–14)."], ["Android TV", "Підлаштування під ТВ: запуск з екрана Android TV, без вимоги сенсорного екрана, 64-біт бібліотеки з іншої збірки, підпис."], ["Android TV", "Банери 320×180, 640×360, 1280×720; значок і обкладинки з Google Play."], ["Android TV", "Пульт: стрілки, OK, Назад, Додому, гучність, введення тексту; на кілька пристроїв одразу."], ["Ножиці", "Скриншот області, вікна, всього екрана та довгий: з прокруткою вниз і вправо."], ["Ножиці", "Таймер до 10 с, щоб встигнути відкрити меню; формат PNG, JPG, WEBP, BMP, PDF."], ["Ножиці", "Вбудований редактор: малювання, стрілки, текст, розмиття; копія в буфер обміну."], ["Ножиці", "Запуск окремим ярликом, без головного вікна."], ["Усе інше", "Екран пристрою у вкладці: звук (Android 10 теж), запис відео, знімок, поворот, міні-вікно в кутку екрана."], ["Усе інше", "Застосунки: назви й значки, видалення та вимкнення системних з копією APK, дозволи, пакетні дії."], ["Усе інше", "Файли: внутрішня пам’ять і картка, перетягування в обидва боки."], ["Усе інше", "Консоль adb з підсвічуванням та історією, logcat з фільтрами."], ["Усе інше", "Очищення за базою відомих непотрібних застосунків з відкатом; резервні копії застосунків."], ["Усе інше", "Огляд пристрою як у CPU-Z: процесор, пам’ять, батарея, екран, камери, датчики."], ["Усе інше", "Кілька пристроїв одразу, USB і Wi-Fi, сполучення за кодом; значок біля годинника; українська, російська, англійська; світла й темна тема."]], "steps": ["Завантажте ADBDroidDesk-1.0.exe і запустіть; Windows запитає дозвіл (при відмові програма стане в теку користувача).", "На пристрої: «Для розробників» → «Налагодження по USB» (приставка: «Налагодження по мережі»); підключіть кабель і дозвольте налагодження.", "Приставка по Wi-Fi: «+ По Wi-Fi» → IP і порт, зазвичай 5555.", "Android TV → «Встановлення»: перетягніть файли застосунків у вікно й натисніть «Встановити»."], "lims": ["З F-Droid можна завантажити будь-яку версію; Google Play використовується лише для картинок банера, не для завантаження застосунків.", "Пониження версії на Android 12 і новіших та зміна підпису можливі лише з видаленням даних застосунку: система не дозволяє інакше.", "Підлаштування під ТВ змінює підпис застосунку: оновлення з магазину до такої копії не прийдуть; застосунки з кількох частин поки не підтримуються; керування пультом застосунку додати не можна.", "Перевірено на телефонах Android 10 і 15; на реальній приставці Android TV 14 служби спеціальних можливостей поки не перевірялися.", "Звук Android 10 йде через sndcpy; Android 11 і новіші передають звук самі.", "Програма неофіційна; всередині adb (Google) і scrcpy (Genymobile), ліцензія Apache-2.0."], "smart": "Інсталятор не підписаний сертифікатом видавця: Windows може показати попередження SmartScreen («Докладніше» → «Все одно виконати»).", "note": "ADB DroidDesk — незалежний проєкт. adb від Google, scrcpy від Genymobile, обидва Apache-2.0. Android і Google Play — торгові марки Google.", "f_rel": "Усі версії", "f_issue": "Повідомити про проблему", "f_src": "Код на GitHub", "f_contacts": "Контакти", "f_terms": "Правила та умови", "f_refund": "Правила повернення коштів", "f_oferta": "Публічний договір", "star_btn": "⭐ Зірка на GitHub", "star_p": "Безкоштовний спосіб допомогти: поставте зірку репозиторію на GitHub. Це нічого не коштує й допомагає іншим знайти програму."}, "ru": {"name": "ADB DroidDesk", "title": "ADB DroidDesk: Android и Android TV из Windows, установка любых приложений (бесплатно)", "h1": "Android и Android TV с вашего компьютера на Windows", "lead": "Ставьте любые приложения на приставку без файлового менеджера, подстраивайте их под ТВ, делайте баннеры, длинные скриншоты с прокруткой и записывайте видео. Бесплатно.", "dl": "Скачать для Windows", "gh": "Смотреть на GitHub", "back": "Все программы", "dlnote": "Текущая версия: 1.0. ADBDroidDesk-1.0.exe. Бесплатно. Windows 10 и 11. Интерфейс на английском, украинском и русском.", "f_h": "Что умеет", "s_h": "Как выглядит", "st_h": "Быстрый старт", "lm_h": "Ограничения", "d_h": "Поддержать проект", "d_p": "Программа бесплатная. Если она вам полезна, можно поддержать разработку картой, Google Pay или USDT: это та же страница взносов, что и для другой программы на этом сайте.", "d_btn": "Способы поддержки", "c1": "Бесплатная программа для Windows для телефонов, планшетов и приставок Android TV по USB и Wi-Fi. Упор на Android TV: поставить на приставку что угодно без файлового менеджера, включить службы специальных возможностей там, где их блокирует система, подстроить телефонное приложение под ТВ, сделать баннер. Отдельно «Ножницы»: обычный и длинный скриншот с прокруткой и свой редактор. Остальное — в одном окне: экран с звуком, приложения, файлы, консоль adb, очистка, копии. adb и scrcpy внутри, ничего ставить отдельно не нужно.", "feats": [["Android TV", "Установка на приставку без файлового менеджера: APK, APKS, APKM, XAPK, ZIP с данными игры (OBB)."], ["Android TV", "Источники: файлы, папка, перетаскивание, F-Droid со всеми старыми версиями, ссылка на файл."], ["Android TV", "Нужные части пакета выбираются под процессор, плотность экрана и язык устройства."], ["Android TV", "Установка более старой версии поверх новой; где Android 12+ не даёт, замена с копией и откатом (данные удаляются)."], ["Android TV", "Старые приложения на Android 14: обход блокировки «слишком старый SDK»."], ["Android TV", "Специальные возможности: включить службу и «ограниченные настройки» командами adb (Android 13–14)."], ["Android TV", "Подстройка под ТВ: запуск с экрана Android TV, без требования сенсорного экрана, 64-бит библиотеки из другой сборки, подпись."], ["Android TV", "Баннеры 320×180, 640×360, 1280×720; значок и обложки из Google Play."], ["Android TV", "Пульт: стрелки, OK, Назад, Домой, громкость, ввод текста; на несколько устройств сразу."], ["Ножницы", "Скриншот области, окна, всего экрана и длинный: с прокруткой вниз и вправо."], ["Ножницы", "Таймер до 10 с, чтобы успеть открыть меню; формат PNG, JPG, WEBP, BMP, PDF."], ["Ножницы", "Встроенный редактор: рисование, стрелки, текст, размытие; копия в буфер обмена."], ["Ножницы", "Запуск отдельным ярлыком, без главного окна."], ["Всё остальное", "Экран устройства во вкладке: звук (Android 10 тоже), запись видео, снимок, поворот, мини-окно в углу экрана."], ["Всё остальное", "Приложения: названия и значки, удаление и отключение системных с копией APK, разрешения, пакетные действия."], ["Всё остальное", "Файлы: внутренняя память и карта, перетаскивание в обе стороны."], ["Всё остальное", "Консоль adb с подсветкой и историей, logcat с фильтрами."], ["Всё остальное", "Очистка по базе известных ненужных приложений с откатом; резервные копии приложений."], ["Всё остальное", "Обзор устройства как в CPU-Z: процессор, память, батарея, экран, камеры, датчики."], ["Всё остальное", "Несколько устройств сразу, USB и Wi-Fi, сопряжение по коду; значок у часов; русский, украинский, английский; светлая и тёмная тема."]], "steps": ["Скачайте ADBDroidDesk-1.0.exe и запустите; Windows спросит разрешение (при отказе программа встанет в папку пользователя).", "На устройстве: «Для разработчиков» → «Отладка по USB» (приставка: «Отладка по сети»); подключите кабель и разрешите отладку.", "Приставка по Wi-Fi: «+ По Wi-Fi» → IP и порт, обычно 5555.", "Android TV → «Установка»: перетащите файлы приложений в окно и нажмите «Установить»."], "lims": ["Скачать из F-Droid можно любую версию; Google Play используется только для картинок баннера, не для скачивания приложений.", "Понижение версии на Android 12 и новее и смена подписи возможны только с удалением данных приложения: система не даёт иначе.", "Подстройка под ТВ меняет подпись приложения: обновления из магазина к такой копии не придут; приложения из нескольких частей пока не поддерживаются; управление пультом приложению добавить нельзя.", "Проверено на телефонах Android 10 и 15; на реальной приставке Android TV 14 службы специальных возможностей пока не проверялись.", "Звук Android 10 идёт через sndcpy; Android 11 и новее передают звук сами.", "Программа неофициальная; внутри adb (Google) и scrcpy (Genymobile), лицензия Apache-2.0."], "smart": "Установщик не подписан сертификатом издателя: Windows может показать предупреждение SmartScreen («Подробнее» → «Всё равно выполнить»).", "note": "ADB DroidDesk — независимый проект. adb от Google, scrcpy от Genymobile, оба Apache-2.0. Android и Google Play — товарные знаки Google.", "f_rel": "Все версии", "f_issue": "Сообщить о проблеме", "f_src": "Код на GitHub", "f_contacts": "Контакты", "f_terms": "Правила и условия", "f_refund": "Правила возврата средств", "f_oferta": "Публичный договор", "star_btn": "⭐ Звезда на GitHub", "star_p": "Бесплатный способ помочь: поставьте звезду репозиторию на GitHub. Это ничего не стоит и помогает другим найти программу."}};
+function esc(s){return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;")}
+function setLang(l){
+  var d = I18N[l] || I18N.en;
+  document.documentElement.lang = l;
+  document.title = d.title;
+  var nodes = document.querySelectorAll("[data-i]");
+  for (var i = 0; i < nodes.length; i++){ var k = nodes[i].getAttribute("data-i"); if (d[k] != null) nodes[i].textContent = d[k]; }
+  document.getElementById("features").innerHTML = d.feats.map(function(f){return '<div class="card"><b>'+esc(f[0])+'</b>'+esc(f[1])+'</div>'}).join("");
+  document.getElementById("steps").innerHTML = d.steps.map(function(s){return '<li>'+esc(s)+'</li>'}).join("");
+  document.getElementById("lims").innerHTML = d.lims.map(function(s){return '<li>'+esc(s)+'</li>'}).join("");
+  ["install","adapt","scissors","apps"].forEach(function(k){ document.getElementById("img_"+k).src = "dd_"+k+"_"+l+".png"; });
+  var b = document.querySelectorAll(".langs button");
+  for (var j = 0; j < b.length; j++) b[j].setAttribute("aria-pressed", b[j].getAttribute("data-lang") === l ? "true" : "false");
+  try { localStorage.setItem("piws-lang", l); } catch (e) {}
+}
+(function () { try { var x = new XMLHttpRequest(); x.open("GET", "https://api.github.com/repos/drugoj00/adb-droiddesk/releases/latest"); x.onload = function () { try { var r = JSON.parse(x.responseText), a = r.assets || []; for (var i = 0; i < a.length; i++) { if (/\.exe$/i.test(a[i].name)) { document.getElementById("dl").href = a[i].browser_download_url; break; } } } catch (e) {} }; x.send(); } catch (e) {} })();
+(function(){
+  var b = document.querySelectorAll(".langs button");
+  for (var i = 0; i < b.length; i++) b[i].addEventListener("click", function(){ setLang(this.getAttribute("data-lang")); });
+  var l = null;
+  try { l = localStorage.getItem("piws-lang"); } catch (e) {}
+  if (!I18N[l]) { var n = (navigator.language || "en").slice(0, 2).toLowerCase(); l = n === "uk" ? "uk" : (n === "ru" || n === "be" ? "ru" : "en"); }
+  setLang(l);
+})();
+</script>
+</body>
+</html>
