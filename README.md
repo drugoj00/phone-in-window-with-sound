@@ -12,9 +12,16 @@ Shows the real screen of an Android phone in a window on a Windows PC. You can c
 
 ## Download
 
-**Current version: 1.3.** **[Latest version: PhoneInWindowWithSound-1.3.exe](https://github.com/drugoj00/phone-in-window-with-sound/releases/latest)** (Assets section). [All versions](https://github.com/drugoj00/phone-in-window-with-sound/releases).
+**Current version: 1.4.** **[Latest version: PhoneInWindowWithSound-1.4.exe](https://github.com/drugoj00/phone-in-window-with-sound/releases/latest)** (Assets section). [All versions](https://github.com/drugoj00/phone-in-window-with-sound/releases).
 
 The installer already contains scrcpy with audio, so you don't need the internet to install, and administrator rights are optional. The SHA-256 checksum of the file is listed in the description of each release. The installer works on Windows 10 and 11. The program is available in English, Ukrainian and Russian and picks the language from your Windows language.
+
+## What is new in version 1.4
+
+- Fixed: screen timeout is left alone while the phone is charging.
+- Fixed: rotation on Android 10 (A7, S9), including apps that lock their orientation.
+- Fallback rotation method for Android 9 and older.
+- Fixed: the “Screen timeout” list shows the real timeout.
 
 ## What is new in version 1.3
 
