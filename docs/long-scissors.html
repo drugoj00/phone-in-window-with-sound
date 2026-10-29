@@ -99,9 +99,14 @@ button#copy{background:var(--accent);color:var(--accent-ink);border:0;border-rad
     <h2 data-i="s_h"></h2>
     <div class="shots">
       <figure><img id="img_panel" src="ls_panel_en.png" alt="" width="1000" height="700"></figure>
+      <figure><img id="img_gif" src="ls_gif_en.png" alt="" width="1000" height="700"></figure>
       <figure><img id="img_editor" src="ls_editor_en.png" alt="" width="1000" height="700"></figure>
       <figure><img id="img_beauty" src="ls_beauty_en.png" alt="" width="1000" height="700"></figure>
       <figure><img id="img_history" src="ls_history_en.png" alt="" width="1000" height="700"></figure>
+      <figure><img id="img_join" src="ls_join_en.png" alt="" width="1000" height="700"></figure>
+      <figure><img id="img_convert" src="ls_convert_en.png" alt="" width="1000" height="700"></figure>
+      <figure><img id="img_text" src="ls_text_en.png" alt="" width="1000" height="700"></figure>
+      <figure><img id="img_menu" src="ls_menu_en.png" alt="" width="1000" height="700"></figure>
     </div>
   </section>
   <section><h2 data-i="st_h"></h2><ol class="steps" id="steps"></ol></section>
@@ -140,7 +145,7 @@ function setLang(l){
   document.getElementById("features").innerHTML = d.feats.map(function(f){return '<div class="card"><b>'+esc(f[0])+'</b>'+esc(f[1])+'</div>'}).join("");
   document.getElementById("steps").innerHTML = d.steps.map(function(s){return '<li>'+esc(s)+'</li>'}).join("");
   document.getElementById("lims").innerHTML = d.lims.map(function(s){return '<li>'+esc(s)+'</li>'}).join("");
-  ["panel","editor","beauty","history"].forEach(function(k){ document.getElementById("img_"+k).src = "ls_"+k+"_"+l+".png"; });
+  ["panel", "gif", "editor", "beauty", "history", "join", "convert", "text", "menu"].forEach(function(k){ document.getElementById("img_"+k).src = "ls_"+k+"_"+l+".png"; });
   var b = document.querySelectorAll(".langs button");
   for (var j = 0; j < b.length; j++) b[j].setAttribute("aria-pressed", b[j].getAttribute("data-lang") === l ? "true" : "false");
   try { localStorage.setItem("piws-lang", l); } catch (e) {}
