@@ -12,11 +12,11 @@
 
 ## Завантажити
 
-**Поточна версія: 1.6.** **[Остання версія: PhoneInWindowWithSound-1.6.exe](https://github.com/drugoj00/phone-in-window-with-sound/releases/latest)** (розділ Assets). [Усі версії](https://github.com/drugoj00/phone-in-window-with-sound/releases).
+**Поточна версія: 2.0.** **[Остання версія: PhoneInWindowWithSound-2.0.exe](https://github.com/drugoj00/phone-in-window-with-sound/releases/latest)** (розділ Assets). [Усі версії](https://github.com/drugoj00/phone-in-window-with-sound/releases).
 
 В інсталяторі вже є scrcpy зі звуком, інтернет для встановлення не потрібен, права адміністратора не обов’язкові. Контрольну суму SHA-256 файлу вказано в описі кожного релізу. Інсталятор підходить для Windows 10 і 11. Програма працює українською, російською та англійською мовами й обирає мову за мовою Windows.
 
-## Що нового у версії 1.6
+## Що нового у версії 2.0
 
 - Заголовок вікна телефона — ім’я пристрою, без слова «Телефон».
 - Нова кнопка Wi-Fi-ADB для інших програм на телефоні (наприклад, Pulsar) — у вікні запуску і в самому вікні телефона.
