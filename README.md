@@ -19,7 +19,7 @@ The installer already contains scrcpy with audio, so you don't need the internet
 ## What is new in version 1.6
 
 - Phone window title is the device name, without the word “Phone”.
-- New “ADB for apps (Wi-Fi)” button: Wi-Fi access for other apps on the phone (such as Pulsar), no window opens.
+- New Wi-Fi ADB button for other apps on the phone (such as Pulsar) — in the launcher window and in the phone window itself.
 - The program checks for scrcpy updates itself and offers to install them.
 - Fixed: scrcpy hanging after a power outage.
 - Fixed: Cyrillic device names sometimes broke in the window title.
