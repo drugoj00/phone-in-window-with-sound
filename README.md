@@ -12,9 +12,18 @@ Shows the real screen of an Android phone in a window on a Windows PC. You can c
 
 ## Download
 
-**Current version: 1.5.** **[Latest version: PhoneInWindowWithSound-1.5.exe](https://github.com/drugoj00/phone-in-window-with-sound/releases/latest)** (Assets section). [All versions](https://github.com/drugoj00/phone-in-window-with-sound/releases).
+**Current version: 1.6.** **[Latest version: PhoneInWindowWithSound-1.6.exe](https://github.com/drugoj00/phone-in-window-with-sound/releases/latest)** (Assets section). [All versions](https://github.com/drugoj00/phone-in-window-with-sound/releases).
 
 The installer already contains scrcpy with audio, so you don't need the internet to install, and administrator rights are optional. The SHA-256 checksum of the file is listed in the description of each release. The installer works on Windows 10 and 11. The program is available in English, Ukrainian and Russian and picks the language from your Windows language.
+
+## What is new in version 1.6
+
+- Phone window title is the device name, without the word “Phone”.
+- New “ADB for apps (Wi-Fi)” button: Wi-Fi access for other apps on the phone (such as Pulsar), no window opens.
+- The program checks for scrcpy updates itself and offers to install them.
+- Fixed: scrcpy hanging after a power outage.
+- Fixed: Cyrillic device names sometimes broke in the window title.
+- Fixed: an unneeded volume warning on Android 11 and newer.
 
 ## What is new in version 1.5
 
