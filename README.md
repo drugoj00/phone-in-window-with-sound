@@ -129,7 +129,7 @@ USDT (TRON/TRC20):
 TXk32CLkwJryTqhmkw6urcM5CacJgPsSpJ
 ```
 
-IBAN (voluntary contribution):
+IBAN (voluntary donation):
 
 ```
 UA413052990000026004040212620
