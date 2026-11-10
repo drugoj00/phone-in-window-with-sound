@@ -12,9 +12,20 @@ Shows the real screen of an Android phone in a window on a Windows PC. You can c
 
 ## Download
 
-**Current version: 2.1.** **[Latest version: PhoneInWindowWithSound-2.1.exe](https://github.com/drugoj00/phone-in-window-with-sound/releases/latest)** (Assets section). [All versions](https://github.com/drugoj00/phone-in-window-with-sound/releases).
+**Current version: 3.0.** **[Latest version: PhoneInWindowWithSound-3.0.exe](https://github.com/drugoj00/phone-in-window-with-sound/releases/latest)** (Assets section). [All versions](https://github.com/drugoj00/phone-in-window-with-sound/releases).
 
 The installer already contains scrcpy with audio, so you don't need the internet to install, and administrator rights are optional. The SHA-256 checksum of the file is listed in the description of each release. The installer works on Windows 10 and 11. The program is available in English, Ukrainian and Russian and picks the language from your Windows language.
+
+## What is new in version 3.0
+
+- Connection over the internet (Tailscale) with invitations: “Give a person access”, they press “Accept and connect”.
+- Video call between two copies of the program: “Calling…”, Answer, Decline; no browser.
+- PC screen: view and control a computer’s screen, access is confirmed on the host side.
+- “Files” window: two panels — this computer, a device or another computer.
+- “View” menu and “Quality: details”: window size to fit the screen, picture size, frame rate, bitrate.
+- TV boxes run faster; Back, Home and Recents buttons in the window header.
+- All program windows share one style.
+- Fixed: empty window on boxes such as Pixel 3 (X98H).
 
 ## What is new in version 2.1
 
