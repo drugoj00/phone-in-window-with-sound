@@ -1,4 +1,4 @@
-[English](README.md) · [Українська](README.uk.md) · [Русский](README.ru.md)
+﻿[English](README.md) · [Українська](README.uk.md) · [Русский](README.ru.md)
 
 🌐 All our programs: https://drugoj00.github.io/
 
@@ -12,9 +12,22 @@ Shows the real screen of an Android phone in a window on a Windows PC. You can c
 
 ## Download
 
-**Current version: 3.0.** **[Latest version: PhoneInWindowWithSound-3.0.exe](https://github.com/drugoj00/phone-in-window-with-sound/releases/latest)** (Assets section). [All versions](https://github.com/drugoj00/phone-in-window-with-sound/releases).
+**Current version: 4.0.** **[Latest version: PhoneInWindowWithSound-4.0.exe](https://github.com/drugoj00/phone-in-window-with-sound/releases/latest)** (Assets section). [All versions](https://github.com/drugoj00/phone-in-window-with-sound/releases).
 
 The installer already contains scrcpy with audio, so you don't need the internet to install, and administrator rights are optional. The SHA-256 checksum of the file is listed in the description of each release. The installer works on Windows 10 and 11. The program is available in English, Ukrainian and Russian and picks the language from your Windows language.
+
+## What is new in version 4.0
+
+- Video calls between computers and with Android (ADB-phon) over Tailscale, with no accounts and no third-party servers for picture and sound
+- Voice-only call; the camera can be turned on and off during the call
+- Mirror and rotation of the other person video
+- The window fits the proportions of the other person video; “fit” and “fill” modes
+- Microphone and speaker choice; automatic microphone choice when the chosen one is silent
+- Sound level meters: whether you hear the other person and whether you are heard
+- “Sound of others”: during the call the sound of AnyDesk and other programs is turned off and restored afterwards
+- Video and sound recording, sound-only recording, screenshot; the other person sees “The other person is recording”
+- Separate folders for video, screenshots and sound, the call video quality and the recording quality can be chosen
+- Warnings: about an old version on the other side and about doubled sound
 
 ## What is new in version 3.0
 
