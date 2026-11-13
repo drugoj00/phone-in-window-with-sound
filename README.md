@@ -12,9 +12,18 @@ Shows the real screen of an Android phone in a window on a Windows PC. You can c
 
 ## Download
 
-**Current version: 4.0.** **[Latest version: PhoneInWindowWithSound-4.0.exe](https://github.com/drugoj00/phone-in-window-with-sound/releases/latest)** (Assets section). [All versions](https://github.com/drugoj00/phone-in-window-with-sound/releases).
+**Current version: 5.0.** **[Latest version: PhoneInWindowWithSound-5.0.exe](https://github.com/drugoj00/phone-in-window-with-sound/releases/latest)** (Assets section). [All versions](https://github.com/drugoj00/phone-in-window-with-sound/releases).
 
-The installer already contains scrcpy with audio, so you don't need the internet to install, and administrator rights are optional. The SHA-256 checksum of the file is listed in the description of each release. The installer works on Windows 10 and 11. The program is available in English, Ukrainian and Russian and picks the language from your Windows language.
+The installer already contains scrcpy with audio, so you don't need the internet to install on 64-bit Windows (on 32-bit Windows and Windows on ARM64 it downloads scrcpy from github.com once), and administrator rights are optional. The SHA-256 checksum of the file is listed in the description of each release. The installer works on Windows 10 and 11. The program is available in English, Ukrainian and Russian and picks the language from your Windows language.
+
+## What is new in version 5.0
+
+- Incoming call ringtone choice for video and audio
+- Avatars in calls: your avatar is visible to the other person; with no video the whole window shows their avatar, your own picture or a letter, with video a small avatar sits next to the name
+- Weak TV box: light profile (picture up to 1280, lower bitrate over the network, hardware encoder if there is one)
+- Hint: mirroring loads the device
+- “Rename…” on right click in the device list (a fallback)
+- The installer is smaller
 
 ## What is new in version 4.0
 
@@ -138,6 +147,8 @@ The installer already contains scrcpy with audio, so you don't need the internet
 - Some banking apps don't like "USB debugging" being on and may refuse to open: that is up to the app itself.
 - Phone calls and apps that forbid recording their sound can't be heard in the window.
 - Tested on Samsung Galaxy S9, A7 and A14.
+- Video calls were tested with two program windows on one computer and on Android devices; a long call between two separate computers has not been tested in full.
+- 32-bit Windows and Windows on ARM64: the installer downloads scrcpy from github.com; these systems have not been tested.
 - The installer is not signed with a publisher certificate yet, so Windows may show a SmartScreen warning ("unknown publisher"): click "More info" and then "Run anyway" if you downloaded the file from here.
 
 ## What it is made of
