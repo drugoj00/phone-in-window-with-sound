@@ -20,7 +20,7 @@ The installer already contains scrcpy with audio, so you don't need the internet
 
 - Fixed: typing from the PC keyboard in the phone window follows the language selected in Windows (Russian, Ukrainian with і ї є ґ, English)
 - Gear menu item “Type in the PC keyboard layout language” (on by default)
-- “Connection over the internet”: show/hide eye icon in the Tailscale token field
+- Eye icon in the input field
 
 ## What is new in version 5.0
 
