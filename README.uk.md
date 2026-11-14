@@ -12,9 +12,15 @@
 
 ## Завантажити
 
-**Поточна версія: 5.0.** **[Остання версія: PhoneInWindowWithSound-5.0.exe](https://github.com/drugoj00/phone-in-window-with-sound/releases/latest)** (розділ Assets). [Усі версії](https://github.com/drugoj00/phone-in-window-with-sound/releases).
+**Поточна версія: 6.0.** **[Остання версія: PhoneInWindowWithSound-6.0.exe](https://github.com/drugoj00/phone-in-window-with-sound/releases/latest)** (розділ Assets). [Усі версії](https://github.com/drugoj00/phone-in-window-with-sound/releases).
 
 В інсталяторі вже є scrcpy зі звуком, на 64-розрядній Windows інтернет для встановлення не потрібен (на 32-розрядній Windows і Windows на ARM64 інсталятор один раз завантажує scrcpy з github.com), права адміністратора не обов’язкові. Контрольну суму SHA-256 файлу вказано в описі кожного релізу. Інсталятор підходить для Windows 10 і 11. Програма працює українською, російською та англійською мовами й обирає мову за мовою Windows.
+
+## Що нового у версії 6.0
+
+- Виправлено: введення з клавіатури ПК мовою, вибраною у Windows (українська з і ї є ґ, російська, англійська), у вікні телефона
+- Пункт шестірні «Друкувати мовою розкладки ПК» (увімкнено за замовчуванням)
+- «Зв’язок через інтернет»: значок показати/сховати у полі токена Tailscale
 
 ## Що нового у версії 5.0
 
