@@ -12,9 +12,17 @@ Shows the real screen of an Android phone in a window on a Windows PC. You can c
 
 ## Download
 
-**Current version: 6.0.** **[Latest version: PhoneInWindowWithSound-6.0.exe](https://github.com/drugoj00/phone-in-window-with-sound/releases/latest)** (Assets section). [All versions](https://github.com/drugoj00/phone-in-window-with-sound/releases).
+**Current version: 7.0.** **[Latest version: PhoneInWindowWithSound-7.0.exe](https://github.com/drugoj00/phone-in-window-with-sound/releases/latest)** (Assets section). [All versions](https://github.com/drugoj00/phone-in-window-with-sound/releases).
 
 The installer already contains scrcpy with audio, so you don't need the internet to install on 64-bit Windows (on 32-bit Windows and Windows on ARM64 it downloads scrcpy from github.com once), and administrator rights are optional. The SHA-256 checksum of the file is listed in the description of each release. The installer works on Windows 10 and 11. The program is available in English, Ukrainian and Russian and picks the language from your Windows language.
+
+## What is new in version 7.0
+
+- The window fits the phone picture without black bars, including after rotation and reconnection
+- “Fit window to video” button for landscape: after the video stops the window returns to its previous size (the automatic mode is off by default)
+- After the connection is lost (cable, Wi-Fi) the phone restores its orientation and screen timeout by itself
+- Quiet reconnection: no error window appears when the cable is unplugged or plugged in
+- “Connection over the internet”: the wizard finds another VPN on the computer and offers to turn it off for the session; after the session the VPN is turned back on
 
 ## What is new in version 6.0
 
