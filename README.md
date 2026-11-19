@@ -19,7 +19,7 @@ The installer already contains scrcpy with audio, so you don't need the internet
 ## What is new in version 7.0
 
 - The window fits the phone picture without black bars, including after rotation and reconnection
-- “Fit window to video” button for landscape: after the video stops the window returns to its previous size (the automatic mode is off by default)
+- “Fit window to video” button in the icon row next to “Rotate”: a click fits the window to the video in landscape, a second click returns the previous size (grey in portrait; the automatic mode is off by default)
 - After the connection is lost (cable, Wi-Fi) the phone restores its orientation and screen timeout by itself
 - Quiet reconnection: no error window appears when the cable is unplugged or plugged in
 - “Connection over the internet”: the wizard finds another VPN on the computer and offers to turn it off for the session; after the session the VPN is turned back on
