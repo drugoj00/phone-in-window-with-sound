@@ -57,7 +57,7 @@ The installer already contains scrcpy with audio, so you don't need the internet
 - Connection over the internet (Tailscale) with invitations: “Give a person access”, they press “Accept and connect”.
 - Video call between two copies of the program: “Calling…”, Answer, Decline; no browser.
 - PC screen: view and control a computer’s screen, access is confirmed on the host side.
-- “Files” window: two panels — this computer, a device or another computer.
+- “Files” window: two panels - this computer, a device or another computer.
 - “View” menu and “Quality: details”: window size to fit the screen, picture size, frame rate, bitrate.
 - TV boxes run faster; Back, Home and Recents buttons in the window header.
 - All program windows share one style.
